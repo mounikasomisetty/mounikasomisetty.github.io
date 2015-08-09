@@ -1,0 +1,458 @@
+body{
+	background-color:  #99ccbb;
+  background-image: url('../test.jpg');
+	font-family: Courier New;
+   max-width: 100% !important;
+   overflow-x: hidden !important;
+	
+}
+fieldset{
+
+}
+.navbar-inverse
+{
+	background-color: #333333 !important;
+	color: white;
+}
+.nav-justified > .active > a
+{
+	background-color: #daacac;
+	margin: 10px;
+	color: white;
+	}
+.navbar-nav > li  a
+{
+	margin: 10px;
+}
+
+.gamee{
+	position: absolute;
+	overflow: hidden;
+	-webkit-animation: dfirst 40s; 
+    animation: dfirst 40s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+}
+#game{
+	height: 150px;
+	overflow: hidden;
+	margin-left: 200px;
+	-webkit-animation: first 40s; 
+    animation: first 40s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+}
+#game1{
+	overflow: hidden;
+}
+#diamond {
+   width: 20px; 
+   height: 20px; 
+   background: #ccaa44;
+   margin: 3px 0 0 30px;
+   border-radius: 10px;
+   float: left;
+   margin: 50px;
+   z-index: 1;
+}
+#pacman1 {
+	z-index: 10;
+  width: 0px;
+  height: 0px;
+  border-right: 60px solid transparent;
+  border-top: 60px solid #daacac;
+  border-left: 60px solid #daacac;
+  border-bottom: 60px solid #daacac;
+  border-top-left-radius: 60px;
+  border-top-right-radius: 60px;
+  border-bottom-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+  float: left;
+  position: absolute;
+  -webkit-animation: mysecond 300ms; 
+  animation: mysecond 300ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+#pacman2 {
+	z-index: 10;
+  width: 0px;
+  height: 0px;
+  border-right: 60px solid transparent;
+  border-top: 60px solid #daacac;
+  border-left: 60px solid #daacac;
+  border-bottom: 60px solid #daacac;
+  border-top-left-radius: 60px;
+  border-top-right-radius: 60px;
+  border-bottom-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+  float: left;
+	position: absolute;
+    -webkit-animation: mythird 300ms; 
+    animation: mythird 300ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+}
+
+@-webkit-keyframes myfirst {
+   from { margin-left: 0px; float: left;}
+   to { margin-left: 5000px;}
+}
+
+@keyframes myfirst {
+	from { margin-left: 0px; float: left;}
+   to { margin-left: 5000px;}
+   
+}
+@-webkit-keyframes first {
+   from { margin-left: 0px; float: left;}
+   to { margin-left: -5000px;}
+}
+
+@keyframes first {
+	from { margin-left: 0px; float: left;}
+   to { margin-left: -5000px;}
+   
+}
+@-webkit-keyframes dfirst {
+   from { margin-left: 0px; float: left;}
+   to { margin-left: 5000px;}
+}
+
+@keyframes dfirst {
+	from { margin-left: 0px; float: left;}
+   to { margin-left: 5000px;}
+   
+}
+@-webkit-keyframes mysecond {
+ from{}
+ to {
+ 	 -moz-transform: rotate(-30deg);
+ -webkit-transform: rotate(-30deg);
+ -ms-transform: rotate(-30deg);
+ -o-transform: rotate(-30deg);
+ transform: rotate(-30deg);
+ }
+
+ }
+@keyframes mysecond {
+	from{}
+ to {
+ 	 -moz-transform: rotate(-30deg);
+ -webkit-transform: rotate(-30deg);
+ -ms-transform: rotate(-30deg);
+ -o-transform: rotate(-30deg);
+ transform: rotate(-30deg);
+ }
+}
+@-webkit-keyframes mythird {
+ from{}
+ to {
+ 	  -moz-transform: rotate(32deg);
+ -webkit-transform: rotate(31deg);
+ -ms-transform: rotate(31deg);
+ -o-transform: rotate(31deg);
+ transform: rotate(31deg);
+ }
+
+ }
+
+@keyframes mythird {
+	from{}
+ to {
+ 	 -moz-transform: rotate(22deg);
+ -webkit-transform: rotate(21deg);
+ -ms-transform: rotate(21deg);
+ -o-transform: rotate(21deg);
+ transform: rotate(21deg);
+ }
+}
+.nav-justified > li > a {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-bottom: 0;
+  font-weight: bold;
+  color: #777;
+  text-align: center;
+  margin: 10px;
+  font-size: 18px;
+
+  }
+.hundred{
+  width: 100%;
+  margin-top: -20px;
+}
+.navbar
+{
+	margin-top: 480px;
+}
+.masthead{
+	background-color: #333333 !important;
+	color: white;
+	height: 480px;
+	top: 0px;
+	width: 100%;
+	position: absolute;
+}
+.mastheadtext{
+	text-align: center;
+	margin-top: 150px;
+
+}
+.mastheadcap{
+	text-align: center;
+	color: #777;
+}
+.maincontent{
+  
+  margin-top: 40px;
+}
+@media (min-width: 992px){
+  .sidebar{
+  background-color: #333333;
+  padding: 9px;
+  /*height: 1200px;*/
+  overflow: hidden;
+}
+.sidebar_list{
+  list-style-type: none;
+  margin-left: -35px;
+   position: fixed;
+  top: 230px;
+  background-color: #333333;
+  overflow: hidden;
+}
+.sidebar_list li{
+  margin-bottom: 20px;
+}
+.sidebar_list li a {
+  color: white;
+}
+.sidebar_list li a .glyphicon {
+  color: white;
+  font-size: 45px;
+}
+.info{
+  position: fixed;
+  top: 130px;
+  right: 10px;
+}
+}
+.linkname{
+  text-align: center;
+}
+@media (max-width:991px){
+   .sidebar{
+  background-color: #333333;
+  padding: 9px;
+  overflow: hidden;
+  text-align: center;
+  width: 100%;
+}
+.sidebar_list li a .glyphicon {
+  color: white;
+  font-size: 50px;
+}
+.sidebar_list{
+  margin-top: 20px;
+  display: block;
+  background-color: #333333;
+}
+.sidebar_list li{
+  display: inline-block;
+}
+.sidebar_list li a {
+  color: white;
+}
+.sidebar_list li a span {
+  color: white;
+}
+/*.sidebar{
+ *   display: none;
+ *   }
+ *   .sidebar_list{
+ *    display: none;
+ *    }*/
+}
+.cates{
+  font-weight: bold;
+}
+ul{
+  list-style-type: none;
+}
+.bold{
+  font-weight: bold;
+}
+.info{
+  text-align: center;
+}
+@media (min-width: 992px){
+  .sidebar{
+  background-color: #333333;
+  padding: 9px;
+  /*height: 1200px;*/
+  overflow: hidden;
+}
+  .button-box > button{
+  margin: 3px;
+  background-color: #555;
+  border-radius: 0px;
+  border: 0px;
+  padding: 12px;
+  color:white;
+  width: 14%;
+}
+}
+ .button-box2 > button{
+  margin: 3px;
+  background-color: #555;
+  border-radius: 0px;
+  border: 0px;
+  color:white;
+  float:right;
+  margin-top: 5px;
+}
+@media (max-width: 991px){
+
+.button-box > button{
+  margin: 3px;
+  background-color: #555;
+  border-radius: 0px;
+  border: 0px;
+  padding: 12px;
+  color:white; 
+  width: 44%;
+}
+}
+.myname{
+  font-weight: bold;
+  font-size: 20px;
+}
+.contact_col{
+  text-align: center;
+}
+#contactmeat li{
+  display: inline-block;
+ /* background-color: white;*/
+ /* width: 50px;
+ *   height: 50px;*/
+}
+#contactmeat li a{
+ /* color:#ee8811;*/
+ color: white;
+  font-size: 50px;
+  vertical-align: central;
+  text-align: center; 
+  margin: 30px;
+}
+#contactmeat2 li{
+  display: inline-block;
+ /* background-color: white;*/
+ /* width: 50px;
+ *   height: 50px;*/
+}
+#contactmeat2 li a{
+ /* color:#ee8811;*/
+ color: white;
+  font-size: 40px;
+  vertical-align: central;
+  text-align: center; 
+  margin: 20px;
+}
+.box{
+  height: 25px;
+  width: 25px;
+}
+#blue
+{
+  background-color: #99ccbb;
+}
+#pink{
+  background-color: #daacac;
+}
+
+#offical{
+  background-color: #F5F5F5;
+}
+.theme{
+  margin: 10px;
+}
+.theme ul li{
+  margin: 4px;
+  display: inline-block;
+}
+.theme ul{
+  float: right;
+}
+.intouch{
+  width: 100%;
+  background-color: #daacac;
+  text-align: center;
+  bottom: 0;
+  position: fixed;
+}
+.getintouch{
+  color: white;
+ /* font-weight: bold;*/
+}
+.small{
+  font-size: 10px;
+  font-weight: bold;
+}
+.slide{
+  margin-top: 40px;
+}
+.contents{
+  font-size: 16px;
+}
+.pannels
+{
+  min-height:300px;
+  background-color:white;
+  margin-top:7px;
+  padding:5px;
+}
+.best
+{
+  color: #E5E493 ;
+  font-size: 10px;
+}
+.inter
+{
+  color: #73CAE3 ;
+  font-size: 10px;
+}
+.beg{
+  color: #FF8755  ;
+    font-size: 10px;
+}
+.key > li
+{
+  display:inline-block;
+}
+.skillslist > li
+{
+  width: 100%;
+}
+.skillslist > li > i{
+  float: right;
+}
+.skillslist > ul >li
+{
+  width: 100%;
+}
+.skillslist > ul > li > i{
+  float: right;
+}

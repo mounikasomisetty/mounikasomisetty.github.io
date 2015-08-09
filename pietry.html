@@ -1,0 +1,351 @@
+<html>
+	<head>
+		<title>Paint Example</title>
+		<link rel="stylesheet" type="text/css" href="css/trial.css">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<link rel="stylesheet" type="text/css" media="all" href="css/jquery.minicolors.css">
+		<script type="text/javascript" src="js/jquery.minicolors.min.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function(){
+			var canvasDiv = document.getElementById('canvasDiv');
+			canvas = document.createElement('canvas');
+			canvas.setAttribute('width', '500');
+			canvas.setAttribute('height', '500');
+			canvas.setAttribute('id', 'canvas');
+			canvasDiv.appendChild(canvas);
+			if(typeof G_vmlCanvasManager != 'undefined') {
+				canvas = G_vmlCanvasManager.initElement(canvas);
+			}
+			context = canvas.getContext("2d");
+			context.fillStyle = "#ffffff";
+			context.fillRect(0,0,500,500);
+
+			$('#canvas').mousedown(function(e){
+			  var l = Math.round(getPageLeft());
+			  var t = Math.round(getPageTop());
+			  var mouseX = e.pageX - l;
+			  var mouseY = e.pageY - t;
+					
+			  paint = true;
+			  addClick(e.pageX - l, e.pageY - t);
+			  redraw();
+			});
+
+			$('#canvas').mousemove(function(e){
+			  if(paint){
+			  	var l = Math.round(getPageLeft());
+			  	var t = Math.round(getPageTop());
+			    addClick(e.pageX - l, e.pageY - t, true);
+			    redraw();
+			  }
+			});
+
+			$('#canvas').mouseup(function(e){
+			  paint = false;
+			});
+
+			$('#canvas').mouseleave(function(e){
+			  paint = false;
+			});
+
+			var clickX = new Array();
+			var clickY = new Array();
+			var clickDrag = new Array();
+			var size = new Array();
+			var colors = new Array();
+			var clickTool = new Array();
+			var paint;
+			var color = "#df4b26";
+			var line = 5;
+			var tool = 'pencil'
+
+			$('.size').click(function(){
+				$('.size').removeClass('active');
+				var ele = document.getElementById(this.id);
+				ele.className += ' active';
+				if(this.id == 'xs')
+					line = 1;
+				else if(this.id == 's')
+					line = 5;
+				else if(this.id == 'm')
+					line = 10;
+				else if(this.id == 'l')
+					line = 15;
+				else if(this.id == 'xl')
+					line = 20;
+			});
+			$('.tool').click(function(){
+				$('.tool').removeClass('active');
+				var ele = document.getElementById(this.id);
+				ele.className += ' active';
+				tool = this.id;
+			});
+
+			function addClick(x, y, dragging)
+			{
+			  clickX.push(x);
+			  clickY.push(y);
+			  clickDrag.push(dragging);
+			  if(tool == "pencil")
+			    {
+			    	size.push(1);
+			    }
+			    else
+			  		size.push(line);
+			  if(tool == "eraser"){
+			      colors.push("white");
+			    }
+			    else if(tool == "pencil")
+			    {
+			    	colors.push("rgba(123,123,123,0.6)");
+			    }
+			    else{
+			    	var s = document.getElementById('currentcolor');
+			       colors.push(s.innerHTML);
+			    }
+			  clickTool.push(tool);
+			  // $('#here').text(clickDrag);
+			}
+
+			function redraw(){
+			  context.clearRect(0, 0, context.canvas.width, context.canvas.height); // Clears the canvas
+			  context.lineJoin = "round";
+			  context.fillStyle = "#ffffff";
+			  context.fillRect(0,0,500,500);
+			  for(var i=0; i < clickX.length; i++) {
+			  	if(clickTool[i] == 'paint-brush')
+			  		context.globalAlpha = 0.4;
+			  context.strokeStyle = colors[i];
+			   context.lineWidth = size[i];		
+			    context.beginPath();
+			    if(clickDrag[i] && i){
+			      context.moveTo(clickX[i-1], clickY[i-1]);
+			     }else{
+			       context.moveTo(clickX[i]-1, clickY[i]);
+			     }
+			     context.lineTo(clickX[i], clickY[i]);
+			     context.closePath();
+			     context.stroke();
+			     context.globalAlpha = 1;
+			  }
+			}
+			function getPageLeft() {
+			    var rect = canvasDiv.getBoundingClientRect();
+			    var docEl = document.documentElement;
+			    return (rect.left + (window.pageXOffset || docEl.scrollLeft || 0));
+			  
+			}
+			function getPageTop() {
+			    var rect = canvasDiv.getBoundingClientRect();
+			    var docEl = document.documentElement;
+			    return (rect.top + (window.pageYOffset || docEl.scrollTop || 0));
+			  
+			}
+			$(function(){
+			  var colpick = $('.demo').each( function() {
+			    $(this).minicolors({
+			      control: $(this).attr('data-control') || 'hue',
+			      inline: $(this).attr('data-inline') === 'true',
+			      letterCase: 'lowercase',
+			      opacity: false,
+			      change: function(hex, opacity) {
+			        if(!hex) return;
+			        if(opacity) hex += ', ' + opacity;
+			        try {
+			          console.log(hex);
+			        } catch(e) {}
+			        $(this).select();
+			      },
+			      theme: 'bootstrap'
+			    });
+			  });
+			  
+			  var $inlinehex = $('#inlinecolorhex h6 span');
+			  $('#inlinecolors').minicolors({
+			    inline: true,
+			    theme: 'bootstrap',
+			    change: function(hex) {
+			      if(!hex) return;
+			      $inlinehex.html(hex);
+			      $('#colorsee').css('background-color',document.getElementById('currentcolor').innerHTML);
+			    }
+			  });
+			});
+			$('#clear').click(function(){
+				context.clearRect(0, 0, context.canvas.width, context.canvas.height);
+				context.fillStyle = "#ffffff";
+				context.fillRect(0,0,500,500);
+				clickX = new Array();
+				clickY = new Array();
+				clickDrag = new Array();
+				size = new Array();
+				colors = new Array();
+				clickTool = new Array();
+			});
+
+			var RclickX = [];
+			var RclickY = [];
+			var RclickDrag = [];
+			var Rsize = [];
+			var Rcolors = [];
+			var RclickTool = [];
+
+			$('#undo').click(function(){
+				RclickX.push(clickX.pop());
+				RclickY.push(clickY.pop());
+				RclickDrag.push(clickDrag.pop());
+				Rsize.push(size.pop());
+				Rcolors.push(colors.pop());
+				RclickTool.push(clickTool.pop());
+				redraw();
+				
+			});
+			$('#redo').click(function(){	
+				clickX.push(RclickX.pop());
+				clickY.push(RclickY.pop());
+				clickDrag.push(RclickDrag.pop());
+				size.push(Rsize.pop());
+				colors.push(Rcolors.pop());
+				clickTool.push(RclickTool.pop());	
+				redraw();
+			});
+			var button = document.getElementById('save');
+			button.addEventListener('click', function (e) {
+			    var dataURL = canvas.toDataURL('image/png');
+			    button.href = dataURL;
+			});
+		});
+		</script>
+	</head>
+	<style type="text/css">
+			#canvas, #picker{
+				border: 3px solid #777;
+			}
+			body {
+			  padding-top: 20px;
+			  padding-bottom: 20px;
+			}
+
+			.navbar {
+			  margin-bottom: 20px;
+			}
+
+			.fourth{
+				width: 24%;
+			}
+			.fifth{
+				width: 19%;
+			}
+			.col-md-12{
+				margin-top: 5px;
+			}
+			.half
+			{
+				width: 49%;
+			}
+
+	</style>
+	<body>
+		<div class="container">
+			<nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Paint</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+		
+		<div class="jumbotron">
+       <!--  <h1 id="here"></h1> -->
+       <div class="row">
+       		<div class="col-md-6">
+       			 <div id="canvasDiv"></div>
+       		</div>
+       		<div class="col-md-6">
+       			<div class="row">
+       				<div class="col-md-12">
+       					<button class="btn fourth btn-primary tool active" id="pencil">Pencil</button>
+       					<!-- <button class="btn fourth btn-primary tool" id="crayon">Crayon</button> -->
+       					<button class="btn fourth btn-primary tool" id="eraser">Eraser</button>
+       					<button class="btn fourth btn-primary tool" id="marker">Marker</button>
+       					<button class="btn fourth btn-primary tool" id="paint-brush">Paint Brush</button>
+       					<!-- <button class="btn fourth btn-primary tool" id="rectangle">Rectangle</button> -->
+       				</div>
+       				<div class="col-md-12">
+       					<button class="btn fifth btn-danger size" id="xs">XS</button>
+       					<button class="btn fifth btn-danger size active" id="s">S</button>
+       					<button class="btn fifth btn-danger size" id="m">M</button>
+       					<button class="btn fifth btn-danger size" id="l">L</button>
+       					<button class="btn fifth btn-danger size" id="xl">XL</button>
+       				</div>
+       				<div class="col-md-12">
+       					<div class="well" style="display:none;">
+       					      <div class="row">
+       								  <div class="col-md-5">
+       									  <div class="form-group">
+       										  <label for="hue-demo">Hue</label>
+       										  <input type="text" id="hue-demo" class="form-control demo" data-control="hue" value="#ff6161">
+       									  </div>
+       									  
+       									  <div class="form-group">
+       										  <label for="saturation-demo">Saturation</label>
+       										  <input type="text" id="saturation-demo" class="form-control demo" data-control="saturation" value="#0088cc">
+       									  </div>
+       								  </div>
+       								  
+       								  <div class="col-md-1"></div>
+       								  
+       								  <div class="col-md-5">
+       									  <div class="form-group">
+       										  <label for="brightness-demo">Brightness</label>
+       										  <input type="text" id="brightness-demo" class="form-control demo" data-control="brightness" value="#00ffff">
+       									  </div>
+       									  <div class="form-group">
+       										  <label for="wheel-demo">Wheel</label>
+       										  <input type="text" id="wheel-demo" class="form-control demo" data-control="wheel" value="#ff99ee">
+       									  </div>
+       								  </div>
+
+       							  </div><!-- @end .row -->
+       					    </div><!-- @end .well -->
+       					    <div class="well">
+       					      <div class="row">
+       					     	  <div class="col-md-6">
+       								    <div class="form-group">
+       										  <input type="text" id="inlinecolors" class="form-control" data-inline="true" value="#4fc8db">
+       									  </div>
+       								  </div>
+       								  
+       								  <div id="inlinecolorhex" class="col-md-6">
+       								    <h6 style="display:none;"><span id="currentcolor">#4fc8db</span></h6 style="display:none;">
+       								    <div style="height:150px;width:150px;" id="colorsee"></div>
+       								  </div>
+       					      </div><!-- @end .row -->
+       					    </div><!-- @end .well -->
+       					  </div><!-- @end .container -->
+       				</div>
+       				<div class="col-md-12">
+       					<button class="btn half btn-success" id="clear">Clear</button>
+       					<a class="btn half btn-success" href="#" download="my-file-name.png" id="save">Save</a>
+       				</div>
+       				<div class="col-md-12">
+       					<button class="btn half btn-success" id="undo">Undo</button>
+       					<button class="btn half btn-success" id="redo">Redo</button>
+       				</div>
+       			</div>
+       		</div>
+       </div>
+      </div>
+      </div>		
+	</body>
+</html>

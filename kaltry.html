@@ -1,0 +1,316 @@
+<html>
+	<head>
+		<title>Paint Example</title>
+		<link rel="stylesheet" type="text/css" href="css/trial.css">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<link rel="stylesheet" type="text/css" media="all" href="css/jquery.minicolors.css">
+		<script type="text/javascript" src="js/jquery.minicolors.min.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function(){
+			var canvas;
+			var context;
+			var canvasDiv;
+			canvas1 = declareCanvas('canvasDiv1','canvas1');
+			canvas2 = declareCanvas('canvasDiv2','canvas2');
+			canvas3 = declareCanvas('canvasDiv3','canvas3');
+			canvas4 = declareCanvas('canvasDiv4','canvas4');
+			context1 = declareContext(canvas1);
+			context2 = declareContext(canvas2);
+			context3 = declareContext(canvas3);
+			context4 = declareContext(canvas4);
+			var CurrentDrawingCanvas;
+			var clickX = new Array();
+			var clickY = new Array();
+			var clickDrag = new Array();
+			var paint = false;
+			var color = "#df4b26";
+			var colors = new Array();
+			var line = 2;
+
+			function getanidea(id)
+			{
+				CurrentDrawingCanvas = id;
+				if(CurrentDrawingCanvas == 'canvas1')
+				{
+					canvas = canvas1;
+					context = context1;
+					canvasDiv = document.getElementById('canvasDiv1');
+				}
+				else if(CurrentDrawingCanvas == 'canvas2')
+				{
+					canvas = canvas2;
+					context = context2;
+					canvasDiv = document.getElementById('canvasDiv2');
+				}
+				else if(CurrentDrawingCanvas == 'canvas3')
+				{
+					canvas = canvas3;
+					context = context3;
+					canvasDiv = document.getElementById('canvasDiv3');
+				}
+				else if(CurrentDrawingCanvas == 'canvas4')
+				{
+					canvas = canvas4;
+					context = context4;
+					canvasDiv = document.getElementById('canvasDiv4');
+				}
+			}
+
+			function declareCanvas(id,shouldbeid) {
+				var canvasDiv = document.getElementById(id);
+				canvas = document.createElement('canvas');
+				canvas.setAttribute('width', '300');
+				canvas.setAttribute('height', '300');
+				canvas.setAttribute('id', shouldbeid);
+				canvasDiv.appendChild(canvas);
+				if(typeof G_vmlCanvasManager != 'undefined') {
+					canvas = G_vmlCanvasManager.initElement(canvas);
+				}
+				return canvas
+			}
+			function declareContext(canvas)
+			{
+				context = canvas.getContext("2d");
+				context.fillStyle = "#000";
+				context.fillRect(0,0,300,300);
+				return context;
+
+			}
+
+			$('canvas').mousedown(function(e){
+				getanidea(this.id);
+				var l = Math.round(getPageLeft());
+				var t = Math.round(getPageTop());
+				var mouseX = e.pageX - l;
+				var mouseY = e.pageY - t;
+
+				paint = true;
+				addClick(e.pageX - l, e.pageY - t);
+				redraw();
+			});
+
+			$('canvas').mousemove(function(e){
+				getanidea(this.id);
+				if(paint){
+			  	var l = Math.round(getPageLeft());
+			  	var t = Math.round(getPageTop());
+			    addClick(e.pageX - l, e.pageY - t, true);
+			    redraw();
+			  }
+			});
+
+			$('canvas').mouseup(function(e){
+				getanidea(this.id);
+				paint = false;
+			});
+
+			function addClick(x, y, dragging)
+			{
+				if(canvas == canvas2)
+				{
+					x = 300 - x;
+				}
+				else if(canvas == canvas3)
+				{
+					
+					y = 300 - y;
+				}
+				else if(canvas == canvas4)
+				{
+					x = 300 - x;
+					y = 300 - y;
+				}
+			  clickX.push(x);
+			  clickY.push(y);
+			  var x = randomColor();
+			  colors.push(x);
+			  clickDrag.push(dragging);
+			 
+			}
+			$('#clear').click(function(){
+				clear(context1);
+				clear(context2);
+				clear(context3);
+				clear(context4);
+				clickX = new Array();
+				clickY = new Array();
+				clickDrag = new Array();
+				paint = false;
+				color = "#df4b26";
+				colors = new Array();
+				line = 2;
+				r = 255;
+				g = 120;
+				b = 120;
+			});
+			$('#save').click(function(){
+				var name = prompt('What is your name?');
+				alert('Sorry, '+name+' this feature is not functional now. Please take a screenshot :P');
+			});
+
+			function clear(context){
+				context.clearRect(0, 0, context.canvas.width, context.canvas.height); // Clears the canvas
+				context.lineJoin = "round";
+				context.fillStyle = "#000";
+				context.fillRect(0,0,300,300);
+			}
+
+			function redraw(){
+
+				drawOne(context1,1);
+				drawOne(context2,2);
+				drawOne(context3,3);
+				drawOne(context4,4);
+			}
+
+			function decideType(type, x, y)
+			{
+				if(type == 1)
+				{
+					cx = x;
+					cy = y; 
+
+				}
+				else if(type == 2)
+				{
+					cx = 300 - x;
+					cy = y; 
+
+				}
+				else if(type == 3)
+				{
+					cx = x;
+					cy = 300 - y;
+
+				}
+				else if(type == 4)
+				{
+					cx = 300 - x;
+					cy = 300 - y; 
+
+				}
+				return [cx,cy];
+			}
+
+			function drawOne(context, type){
+				context.clearRect(0, 0, context.canvas.width, context.canvas.height); // Clears the canvas
+				context.lineJoin = "round";
+				context.fillStyle = "#000";
+				context.fillRect(0,0,300,300);
+				for(var i=0; i < clickX.length; i++) {
+					context.strokeStyle = colors[i];
+					context.lineWidth = line;		
+					context.beginPath();
+					if(clickDrag[i] && i)
+					{
+						x = decideType(type, clickX[i-1], clickY[i-1])
+						context.moveTo(x[0],x[1]);
+					}
+					else
+					{
+						x = decideType(type, clickX[i-1], clickY[i])
+						context.moveTo(x[0],x[1]);
+					}
+					x = decideType(type, clickX[i], clickY[i])
+					context.lineTo(x[0],x[1]);
+					context.closePath();
+					context.stroke();
+				}
+			}
+
+			var r = 255;
+			var g = 120;
+			var b = 120;
+			function randomColor() {
+				beg = "rgba(";
+				end = ",1);";
+				if ( r == 255 && g < 255 && b == 120 )
+				      {
+				      g++;
+				      }
+				    if ( g == 255 && r > 120 && b == 120 )
+				      {
+				      r--;
+				      }
+				    if ( g == 255 && b < 255 && r == 120 )
+				      {
+				      b++;
+				      }
+				    if ( b == 255 && g > 120 && r == 120 )
+				      {
+				      g--;
+				      }
+				    if ( b == 255 && r < 255 && g == 120 )
+				      {
+				      r++;
+				      }
+				    if ( r == 255 && b > 120 && g == 120 )
+				      {
+				      b--;
+				      }
+				color = beg + r.toString() + "," + g.toString() + "," + b.toString() + end;
+				return color;
+			}
+
+			function getPageLeft() {
+			    var rect = canvas.getBoundingClientRect();
+			    var docEl = document.documentElement;
+			    return (rect.left + (window.pageXOffset || docEl.scrollLeft || 0));
+			  
+			}
+			function getPageTop() {
+			    var rect = canvas.getBoundingClientRect();
+			    var docEl = document.documentElement;
+			    return (rect.top + (window.pageYOffset || docEl.scrollTop || 0));
+			  
+			}
+			
+		});
+		</script>
+	</head>
+	<style type="text/css">
+			canvas{
+				/*border: 2px solid #777;*/
+				float: left;
+			}
+			.sizer{
+				width: 610px;
+				float: left;
+				/*height: 500px;*/
+			}
+			body{
+				padding: 20px;
+				text-align: center;
+			}
+			.jumbotron{
+				min-height: 690px;
+			}
+
+	</style>
+	<body>
+		<div class="container">
+		<div class="jumbotron">
+		<div class="sizer">
+		<div id="canvasDiv1"></div>
+		<div id="canvasDiv2"></div>
+		<div id="canvasDiv3"></div>
+		<div id="canvasDiv4"></div>
+		</div>
+		<div>
+			<h3 style="text-align:center;font-weight:200;">(Attempt at ) A kaleidoscope</h3>
+			<p style="text-align:center"> Inspired by The Doodle Project at</p>
+			<p> <a href="http://thesouledstore.com/index.php?route=information/static">The Souled Store</a></p>
+			<button id="save" class="btn btn-success">Save this Masterpiece!</button>
+			<button id="clear" class="btn btn-danger">Make a New One!</button>
+			<p style="white-space:pre;margin-top:20px;">" Give me fire, give me rain,
+I want joy with my pain
+I want your fears, your hopes,
+The whole kaleidoscope"
+		- The Script
+			</p>
+		</div>
+	</div>
+	</div>
+	</body>
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    	<title>Mounika Somisetty</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/bootstrap.css" rel="stylesheet">
+	    <link href="css/index.css" rel="stylesheet">
+         <link href="css/trial.css" rel="stylesheet">
+	    <link rel="stylesheet" href="font-awesome-4.1.0/css/font-awesome.min.css">
+	   
+     
+        <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.5.min.js" type="text/javascript"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js" type="text/javascript"></script>
+		<script src="js/bootstrap.js"></script>
+		<link href='http://fonts.googleapis.com/css?family=Lato:300,300italic' rel='stylesheet' type='text/css'>
+	</head>
+    <script type="text/javascript">
+    function toRGB (input_hex) {
+
+
+    if(input_hex[0] == '#')
+        input_hex = input_hex.slice(1); 
+
+    if(input_hex.length < 3)
+        return;
+
+    if(input_hex.length >= 6)   
+    { 
+        var red = input_hex.slice(0,2);
+        var green = input_hex.slice(2,4);
+        var blue = input_hex.slice(4,6);
+        console.log(red,green,blue);
+    }
+    else
+    {
+        var red = input_hex.slice(0,1);
+        var green = input_hex.slice(1,2);
+        var blue = input_hex.slice(2,3);
+        red = red + red;
+        green = green + green;
+        blue = blue + blue;
+        console.log(red,green,blue);
+
+    }
+
+        return "rgb("+HexToDec(red).toString()+","+HexToDec(green).toString()+","+HexToDec(blue).toString()+")";
+    }
+
+    function HexToDec (two_letter_hex) {
+
+        var second_digit = two_letter_hex.slice(0,1);
+        var first_digit = two_letter_hex.slice(1,2);
+        second_digit = mapHexToDec(second_digit)*16;
+        first_digit = mapHexToDec(first_digit);
+        return second_digit + first_digit;
+    }
+
+    function mapHexToDec(one_letter_hex) {
+    var return_value = -1;
+
+        if(one_letter_hex >= "A")
+        {
+            return_value = one_letter_hex.charCodeAt(0) - "A".charCodeAt(0);
+            return_value = return_value + 10;
+        }
+        else
+        {
+            return_value = one_letter_hex.charCodeAt(0) - "0".charCodeAt(0);
+        }
+        return return_value
+    }</script>
+    <script type="text/javascript">
+        function toHex(input_rgb)
+        {
+            var temp = input_rgb.split(',');
+            if(temp[0][3] == 'a')
+                temp[0] = temp[0].slice(5);
+            else
+                temp[0] = temp[0].slice(4);
+
+            temp[2] = temp[2].slice(0,temp[2].length - 1);
+            return "#" + DecToHex(temp[0]) + DecToHex(temp[1]) + DecToHex(temp[2]);
+        }
+
+        function DecToHex(number_in_string)
+        {
+            var number = parseInt(number_in_string)
+            see =  [parseInt(number/16), number%16];
+            return mapDecToHex(see[0]) + mapDecToHex(see[1]);
+
+        }
+
+        function mapDecToHex(number_less_than_16)
+        {
+            if(number_less_than_16 >= 10)
+            {
+                return String.fromCharCode("A".charCodeAt(0) + number_less_than_16 - 10);
+
+            }
+            else
+            {
+                return String.fromCharCode("0".charCodeAt(0) + number_less_than_16);
+
+            }
+        }
+    </script>
+	<body>
+        <style type="text/css">
+            .PopupPanel
+            {
+               /* border: solid 1px black;*/
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                z-index: 100;
+
+                height: 200px;
+                margin-top: -100px;
+
+                width: 300px;
+                margin-left: -150px;
+            }
+            /*input{
+                height: 50%;
+                width: 100%;
+            }*/
+            * {
+              margin: 0;
+              padding: 0;
+              -webkit-font-smoothing: antialiased;
+              -moz-osx-font-smoothing: grayscale;
+              -webkit-box-sizing: border-box;
+              -moz-box-sizing: border-box;
+              box-sizing: border-box;
+            }
+           
+            body,
+            input {
+              font: 300 18px/1.2 'Gotham SSm A', 'Gotham SSm B', sans-serif;
+              background: #678910;
+            }
+            input {
+              display: block;
+              width: 100%px;
+              font-size: 34px;
+              line-height: 44px;
+              background: transparent;
+              border: none;
+              border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+              padding: 5px 0;
+              border-radius: 0;
+            }
+            input:focus {
+              border-bottom-color: #000;
+              outline: none;
+            }
+            
+            .light {
+              color: #222!important;
+            }
+            .light input {
+              color: #222!important;
+              border-bottom-color: rgba(0, 0, 0, 0.4);
+            }
+            .light input:focus {
+              border-bottom-color: #000;
+            }
+            .dark input {
+              color: #fff!important;
+              border-bottom-color: rgba(255, 255, 255, 0.4);
+            }
+            .dark input:focus {
+              border-bottom-color: #fff;
+            }
+            .dark ::-webkit-input-placeholder {
+              color: #fff!important;
+            }
+            .dark :-moz-placeholder {
+              color: #fff!important;
+            }
+            .dark ::-moz-placeholder {
+              color: #fff!important;
+            }
+            .dark :-ms-input-placeholder {
+              color: #fff!important;
+            }
+            ::-webkit-input-placeholder {
+              color: #222;
+            }
+            :-moz-placeholder {
+              color: #222;
+            }
+            ::-moz-placeholder {
+              color: #222;
+            }
+            :-ms-input-placeholder {
+              color: #222;
+            }
+
+            h1{
+                text-align: center;
+            }
+
+            .dark h1
+            {
+                color: #fff !important;
+            }
+
+        </style>
+        <div class="PopupPanel light" id="HexToRGB">
+           <input type='text' id="i_hex" placeholder="hex">
+           <br>
+           <input type='text' id="o_rgb" placeholder="rgb">
+           <h1><i class="fa fa-exchange"></i></h1>
+        </div>
+        <div class="PopupPanel light" id="RGBToHex">
+           <input type='text' id="i_rgb" placeholder="rgb">
+           <br>
+           <input type='text' id="o_hex"  placeholder="hex">
+            <h1><i class="fa fa-exchange"></i></h1>
+        </div>
+    </body>
+    <script type="text/javascript">
+        $('#RGBToHex').hide();
+        $('.fa-exchange').click(function(){
+            $('.PopupPanel').toggle();
+            // $('#HexToRGB').toggle();
+        });
+        $('#i_hex').keyup(function(){
+            $('#o_rgb').val(toRGB($('#i_hex').val()));
+            $('body').css('background-color',$('#o_rgb').val());
+            lightOrDark($('#o_rgb').val());
+        })
+        $('#i_rgb').change(function(){
+            $('#o_hex').val(toHex($('#i_rgb').val()));
+            $('body').css('background-color',$('#i_rgb').val());
+            lightOrDark($('#i_rgb').val());
+        })
+
+        function lightOrDark(input_rgb)
+        {
+            var temp = input_rgb.split(',');
+            if(temp[0][3] == 'a')
+                temp[0] = temp[0].slice(5);
+            else
+                temp[0] = temp[0].slice(4);
+
+            temp[2] = temp[2].slice(0,temp[2].length - 1);
+            console.log(temp)
+            if(parseInt(temp[0]) > 125 || parseInt(temp[1]) > 125 || parseInt(temp[2]) > 125)
+                $('.PopupPanel').removeClass( "PopupPanel dark" ).addClass( "PopupPanel light" );
+            else
+                $('.PopupPanel').removeClass( "PopupPanel light" ).addClass( "PopupPanel dark" );
+        }
+    </script>
+</html>

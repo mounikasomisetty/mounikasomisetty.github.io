@@ -1,0 +1,504 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+    <title>Mounika Somisetty</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="font-awesome-4.1.0/css/font-awesome.min.css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js">
+		</script>
+		<script src="js/bootstrap.js">
+		</script>
+    <script type="text/javascript">
+      function sidebarheight()
+      {
+        if($('body').width() > 992)
+             {
+              var x = $(window).height();
+              var y = $('.maincontent').height();
+              if(x > y)
+              { 
+                 x = x + 50;
+                $('.sidebar').height(x);
+              }
+              else
+              {
+                y = y+50;
+                $('.sidebar').height(y);
+              }
+             }
+             else{
+              $('.sidebar').css('height',"auto");
+             }
+      }
+	function blue()
+{
+	
+              $('body').css('background-color',"#99ddcc");
+              $('body').css('background-image',"url()");
+              $('#activehome').css('background-color',"#ee8811");
+              $('.intouch').css('background-color',"#ee8811");
+              $('#pacman1').css('border-right', '60px solid transparent');
+              $('#pacman1').css('border-top', '60px solid #ee8811');
+              $('#pacman1').css('border-left', '60px solid #ee8811');
+              $('#pacman1').css('border-bottom', '60px solid #ee8811');
+              $('#pacman2').css('border-right', '60px solid transparent');
+              $('#pacman2').css('border-top', '60px solid #ee8811');
+              $('#pacman2').css('border-left', '60px solid #ee8811');
+              $('#pacman2').css('border-bottom', '60px solid #ee8811');
+}
+        $(document).ready(function(){
+             $('.sidebar').hide();
+             $('.resume').hide();
+            $('.projects').hide();
+            $('.About').hide();
+             $(".contacttext").hide();
+		blue();
+             $( window ).resize(function() {
+              //alert("resized");
+                sidebarheight();
+            });
+           $('#resume_link').click(function(){
+             $('.masthead').animate({
+                marginTop:'-460px'
+              },"slow");
+              $('#navigationbar').animate({
+                marginTop:'-60px'
+              },"slow");
+              $('.resume').animate({
+                marginTop:'40px'
+              },"slow");
+              $('.sidebar').show();
+              $('.linkname').hide();
+              $('#navigationbar').hide();
+              $('.resume').show();
+               $('.home').hide();
+               $('.About').hide();
+               $(".intouch").hide();
+               sidebarheight();
+
+           });
+           $(".sidebar").hover(function(){
+                 $('.linkname').show();
+                  },function(){
+                 $('.linkname').hide();
+                });
+            $("#home").hover(function(){
+                 $('.address').show();
+                  },function(){
+                 $('.address').hide();
+                });
+             $("#email").hover(function(){
+                 $('.emailid').show();
+                  },function(){
+                 $('.emailid').hide();
+                });
+           $("#home_s").click(function(){
+               $('.masthead').animate({
+                marginTop:'0px'
+              },"slow");
+                $('#navigationbar').show();
+              $('#navigationbar').animate({
+                marginTop:'470px'
+              },"slow");
+              $('#home').animate({
+                marginTop:'0px'
+              },"slow");
+              $('.sidebar').hide();
+              $('.resume').hide();
+              $('.About').hide();
+              $('.projects').hide();  
+              $('.linkname').hide();
+               $('.home').show(); 
+               $(".intouch").show();
+                sidebarheight();
+           });
+            $("#projects_link").click(function(){
+               $('.masthead').animate({
+                marginTop:'-460px'
+              },"slow");
+              $('#navigationbar').animate({
+                marginTop:'-60px'
+              },"slow");
+              $('.projects').animate({
+                marginTop:'40px'
+              },"slow");
+              $('.sidebar').show();
+              $('.linkname').hide();
+              $('#navigationbar').hide();
+              $('.resume').hide();
+               $('.home').hide();
+               $('.projects').show();
+               $(".intouch").show();
+                sidebarheight();
+           });
+             $("#contact_link").click(function(){
+               $('.masthead').animate({
+                marginTop:'-460px'
+              },"slow");
+              $('#navigationbar').animate({
+                marginTop:'-60px'
+              },"slow");
+              $('.About').animate({
+                marginTop:'40px'
+              },"slow");
+              $('.sidebar').show();
+              $('.linkname').hide();
+              $('#navigationbar').hide();
+              $('.resume').hide();
+               $('.home').hide();
+               $('.projects').hide();
+               $('.About').show();
+               $(".intouch").show();
+                sidebarheight();
+           });
+            $("#contact_s").click(function(){
+              $('.home').hide();
+              $('.resume').hide();
+              $('.projects').hide();
+              $('.About').show();
+              $(".intouch").show();
+               sidebarheight();
+           });
+            $("#project_s").click(function(){
+              $('.home').hide();
+              $('.resume').hide();
+              $('.projects').show();
+              $('.About').hide();
+              $(".intouch").show();
+               sidebarheight();
+           });
+            $("#resume_s").click(function(){
+              $('.home').hide();
+              $('.resume').show();
+              $('.projects').hide();
+              $('.About').hide();
+               $(".intouch").hide();
+                sidebarheight();
+           });
+            $('#blue').click(function(){
+              $('body').css('background-color',"#99ddcc");
+              $('body').css('background-image',"url()");
+              $('#activehome').css('background-color',"#ee8811");
+              $('.intouch').css('background-color',"#ee8811");
+              $('#pacman1').css('border-right', '60px solid transparent');
+              $('#pacman1').css('border-top', '60px solid #ee8811');
+              $('#pacman1').css('border-left', '60px solid #ee8811');
+              $('#pacman1').css('border-bottom', '60px solid #ee8811');
+              $('#pacman2').css('border-right', '60px solid transparent');
+              $('#pacman2').css('border-top', '60px solid #ee8811');
+              $('#pacman2').css('border-left', '60px solid #ee8811');
+              $('#pacman2').css('border-bottom', '60px solid #ee8811');
+            });
+            $('#pink').click(function(){
+              $('body').css('background-image',"url('test.jpg')");
+              $('#activehome').css('background-color',"#daacac");
+               $('.intouch').css('background-color',"#daacac");
+             $('#pacman1').css('border-right', '60px solid transparent');
+              $('#pacman1').css('border-top', '60px solid #daacac ');
+              $('#pacman1').css('border-left', '60px solid #daacac');
+              $('#pacman1').css('border-bottom', '60px solid #daacac');
+              $('#pacman2').css('border-right', '60px solid transparent');
+              $('#pacman2').css('border-top', '60px solid #daacac');
+              $('#pacman2').css('border-left', '60px solid #daacac');
+              $('#pacman2').css('border-bottom', '60px solid #daacac');
+            });
+            $(".getintouch").click(function(){
+              $(".contacttext").toggle();
+              if($('.contacttext').css('display') == "none")
+              {
+                $('#icon').removeClass("glyphicon-chevron-down").addClass("glyphicon-chevron-up");
+              if($('.home').css('display') != "none")
+		{
+                  $('#navigationbar').show();
+                $('#navigationbar').animate({
+                  marginTop:'470px'
+                },"slow");
+                }
+		}
+              else{
+                $('#icon').removeClass("glyphicon-chevron-up").addClass("glyphicon-chevron-down");
+              if($('.home').css('display') != "none")
+      {
+	            $('#navigationbar').show();
+                $('#navigationbar').animate({
+                  marginTop:'-20px'
+                },"slow");
+                }
+       }       
+            });
+        });
+    </script>
+	</head>
+	<body>
+	<div class="masthead">
+    <div class="theme"> 
+      <ul>
+        <li><div class="box" id="blue"></div></li>
+        <li><div class="box" id="pink"></div></li>
+      </ul>
+    </div>
+		<h1 class="mastheadtext">Hi! I'm Mounika Somisetty!</h1>
+		<h3 class="mastheadcap"> Currently a second year Computer Science student at IIIT-Hyderabad.</h3>
+		<br>
+		<div class="gamee">
+			<div id="game1">
+				<div id="pacman1"></div>
+				<div id="pacman2"></div>
+			</div>
+			<div id="game">
+				<div id="diamond"></div>
+    			<div id="diamond"></div>
+                <div id="diamond"></div>
+                <div id="diamond"></div>
+                <div id="diamond"></div>
+                <div id="diamond"></div>
+                <div id="diamond"></div>
+                <div id="diamond"></div>
+                <div id="diamond"></div>
+                <div id="diamond"></div>
+                <div id="diamond"></div>
+                <div id="diamond"></div>
+                <div id="diamond"></div>
+                <div id="diamond"></div>
+                <div id="diamond"></div>
+                <div id="diamond"></div>
+                <div id="diamond"></div>
+                <div id="diamond"></div>
+                <div id="diamond"></div>
+                <div id="diamond"></div>
+                <div id="diamond"></div>
+                <div id="diamond"></div>
+                <div id="diamond"></div>
+                <div id="diamond"></div>
+                <div id="diamond"></div>
+                <div id="diamond"></div>
+                <div id="diamond"></div>
+                <div id="diamond"></div>
+                <div id="diamond"></div>
+                <div id="diamond"></div>
+                <div id="diamond"></div>
+                <div id="diamond"></div>
+                <div id="diamond"></div>
+                <div id="diamond"></div>
+                <div id="diamond"></div>
+                <div id="diamond"></div>
+                <div id="diamond"></div>
+                <div id="diamond"></div>
+                <div id="diamond"></div>
+                <div id="diamond"></div>
+                <div id="diamond"></div>
+                <div id="diamond"></div>
+                <div id="diamond"></div>
+                <div id="diamond"></div>
+                <div id="diamond"></div>
+                <div id="diamond"></div>
+                <div id="diamond"></div>
+                <div id="diamond"></div>
+                <div id="diamond"></div>
+                <div id="diamond"></div>
+                <div id="diamond"></div>
+                <div id="diamond"></div>
+                <div id="diamond"></div>
+                <div id="diamond"></div>
+          </div>
+        </div>
+       </div>
+       <div id="navigationbar" class="navbar navbar-inverse navbar-static-top" role="navigation">
+       		<div class="container">
+       			<div class="navbar-header">
+       				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+			            <span class="sr-only">Toggle navigation</span>
+			            <span class="icon-bar"></span>
+			            <span class="icon-bar"></span>
+			            <span class="icon-bar"></span>
+          			</button>
+        		</div>
+        		<div class="navbar-collapse collapse">
+        			<ul class="nav nav-justified">
+            			<li class="active"><a href="#home" id="activehome"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+            			<li id="resume_link"><a><span class="glyphicon glyphicon-list-alt"></span> Resume</a></li>
+            			<li id="projects_link"><a><span class="glyphicon glyphicon-briefcase"></span> Works & Skills</a></li>
+            			<li id="contact_link"><a href="#aandc"><span class="glyphicon glyphicon-user"></span> About</a></li>
+          			</ul>
+        		</div>
+      		</div>
+    	</div>
+    	<div class="container hundred">
+        	<div class="row">
+            	<div class="col-md-1 sidebar">
+	            	<ul class="sidebar_list">
+		                <li class="list-icon" id="home_s">
+		                    <a href="#home">
+		                        <span class="glyphicon glyphicon-home"></span>
+		                        <br>
+		                        <span class="linkname">  Home</span>
+		                    </a>
+		                </li>
+		                <li id="resume_s" class="list-icon">
+		                    <a>
+		                        <span class="glyphicon glyphicon-list-alt"></span>
+		                        <br>
+		                        <span class="linkname"> Resume</span>
+		                    </a>
+		                </li>
+		                <li class="list-icon" id="project_s">
+		                    <a href="#project">
+		                        <span class="glyphicon glyphicon-briefcase"></span>
+		                        <br>
+		                        <span class="linkname">Works</span>
+		                    </a>
+		                </li>
+		                <li class="list-icon" id="contact_s">
+		                    <a href="#aandc">
+		                        <span class="glyphicon glyphicon-user"></span>
+		                        <br>
+		                        <span class="linkname">About</span>
+		                    </a>
+		                </li>
+	            	</ul>
+	            </div>
+	            <div class="col-md-11 maincontent">
+	                <div class="home hundred slide">
+	                </div>
+	               <div class="resume slide">
+	               		<div class="container">
+	               			<div class="row">
+	                    		<div class="col-md-9 resume_content">
+                    				<h3 class="cates">Education</h3>
+				                        <ul>
+				                            <li>International Institute of Information Technology, Hyderabad, Andhra Pradesh, India 500032 </li>
+				                            Bachelor of Technology in Computer Science Engineering<br />
+				                            Anticipated Graduation: April 2017<br />
+				                            First Year CGPA - 9.63
+				                            <br><br>
+				                            <li>FIITJEE, Kukatpally Centre, Hyderabad, Andhra Pradesh, India 500072</li>
+				                            11th and 12th
+				                            Graduated with a score of 972/1000
+				                            <br><br>
+				                            <li>Orchids-The International School, Hyderabad, Andhra Pradesh, India 500033</li>
+				                            9th and 10th
+				                            Graduated with a GPA of 10.0/10.0
+				                        </ul>
+				                    <h3 class="cates">Experience</h3>
+				                     	<ul>
+				                        	<li class="bold">Work:</li>
+				                            	<ul>
+							                        <li>INTERN at Computer Generated Solutions.</li>
+							                            Designed the user interface for the company's internal portal.<br>
+							                        Developed the Human Resources Recruitment Module,
+							                        facilitating the interview and job posting procedure <br>
+							                        May 2014 -August 2014
+							                        <li>INTERN at YogoPathy. </li>
+							                        Designed the company's android and windows phone application. <br>
+							                        December 2013-January 2014<br>
+						                        </ul>
+				                        	<li class="bold">Leadership:</li>
+				                        		<ul>
+				                            		<li>School Captain       2010-2011</li>
+				                           			<li> House Vice Captain              2009-2010</li>
+				                        		</ul>
+				                        	<li class="bold">Additional:</li>
+				                        		<ul>
+							                        <li>VOLUNTEER at The Guardian Circle, Hyderabad Chapter.</li>
+							                        <li>ASSISTED on the Android application for Felicity! - IIIT-H's college fest.</li>
+							                        <li>DESIGNED a clap-controlled output voltage regulator.</li>
+						                        </ul>
+				                        </ul>
+				                    <h3 class="cates">Activities/Honors </h3>
+				                         <ul>
+				                            <li>Ranked 3rd internationally in the International English Olympiad in 2011</li>
+				                            <li>Ranked 6th internationally in the International English Olympiad in 2012</li>
+				                            <li>Ranked 3rd in the state in the National Cyber Olympiad in 2011</li>
+				                            <li>Speaks four languages i.e English, French, Hindi, and Telugu.</li>
+				                            <li>Active in painting, piano, writing (school/college magazine), and dance. </li>
+				                            <li>Member of the Constitution Drafting Committee at IIIT-H </li>
+				                        </ul>   
+				                    <h3 class="cates">Computer Skills</h3>
+				                         <ul>
+								<li>Experienced in using the Software Developement Life Cycle</li>
+				                            <li>Experienced in C, Python, Ruby, C# with .NET Framework, and Java(Android)</li>
+				                            <li>Experienced in Javascript, jQuery</li>
+				                            <li>Experienced in Bootstrap Framework, Foundation Framework</li>
+				                            <li>Experienced in HTML, CSS</li>
+								<li>Experienced in Web Development with Frameworks such as Ruby on Rails and Django</li>
+				                            <li>Exposure to Android and Windows Mobile Development </li>
+				                            <li>Experienced in PHP and mySQL</li>
+				                            <li>Experienced in ASP.NET, Microsoft SQL Server</li>
+				                         </ul>
+				                    <h3 class="cates">References</h3>
+				                    	<ul>
+				                    		<li>Available on request</li>
+				                     	</ul>
+                 				</div>
+				                <div class="col-md-3 info " >
+				                    <span class="myname">Srivenkata Navya Mounika Somisetty</span><br>
+				                    <img src="data:image/jpeg;base64,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">
+				                    <hr>
+				                    mounikas@gmail.com<br>
+				                    +91-9652042388<br>
+				                    246 Parul Hostel<br>
+				                    International Institute of Information Technology - Hyderabad, Gachibowli<br>
+				                    Hyderabad, AP,India 500032<br>
+				                    <hr>
+				                    <a href="Long.pdf">CV - PDF Format</a><br>
+				                    <a href="Short.pdf">Resume - PDF Format</a><br>
+                 				</div>
+                			</div>
+               			</div>
+               		</div>
+               		<div class="projects slide">
+                    	<h2>Under Construction</h2>
+                	</div>
+                	<div class="About slide">
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-md-8 resume_content">
+                                <h2 style="text-align:center;font-weight:bold;">About Me </h2>
+                                <hr>
+                                <h4 style="text-align:center">My name is Srivenkata Navya Mounika Somisetty. <br> It's more than a mouthful. <br> </h4>
+                                <hr>
+                                <h4 style="text-align:right">
+                                I'm an artist by nature  <br> I believe imagination is the greatest tool we have.<br> I'm a perfectionist, with a strong sense of vision and an eye for design. As a passionate person, I feel a need to create and deliver. I dream to achieve. </h4>
+                                <hr>
+                                <h4>... and a coder by choice. <br>
+                                Perserverance is the single most quality I like about myself. If I want something, I don't stop till I get it. 
+                                I'm curious, analytical and a little single-minded at times.<br>
+                                I'm a fast learner, a good learner and a team player.<br> I work to achieve.
+                                  </h4>
+                                  <hr> 
+                                <h4 style="text-align:center">These two sides of me are two hemispheres of the brain. They fit perfectly together in harmony. Better as a whole.</h4>
+                                 <br> 
+                                
+                               
+                        </div>
+                        <div class="col-md-4 contact_col">
+                           <span class="myname">Srivenkata Navya Mounika Somisetty</span><br>
+                            <img src="data:image/jpeg;base64,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">
+                            <hr>
+                                <h3 style="text-align:center"> "It is our choices, that show what we truly are, far more than our abilities" </h3>
+                         
+                        </div>
+                      </div>
+                    </div>
+                	</div>
+            	</div>
+        	</div>
+    	</div>
+       <div class="container intouch">
+                          <h1 class="getintouch"><span id="icon" class="glyphicon glyphicon-chevron-up"></span> get in touch</h1>
+                          <span class="contacttext">
+                             <ul id="contactmeat">
+                              <li id="email"><a href="#"><i class="fa fa-envelope-o"></i> </a></li>
+                              <li id="home"><a href="#"><i class="fa fa-home"></i></a></li>
+                              <li><a href="https://www.facebook.com/mounikasomisetty"><i class="fa fa-facebook"></i></a></li>
+                              <li><a href="https://plus.google.com/u/0/+MounikaSomisetty"><i class="fa fa-google-plus"></i></a></li>
+                              <li><a href="https://www.linkedin.com/pub/mounika-somisetty/99/193/b02"><i class="fa fa-linkedin"></i></a></li>
+                            </ul>
+                          </span>
+          </div>
+    </body>
+</html>
