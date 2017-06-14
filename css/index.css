@@ -11,133 +11,145 @@ html
 {
 	overflow: hidden;
 }
+#aboutme{
+	font-size: 18px !important;
+}
 
 
 @media (max-width: 991px) {
-#home .inner-container .side-container{
-	display: none;
-}
-.right-then-center
-{
-	text-align: center;
-}
-.left-then-center
-{
-	text-align: center;
-}
+	#home .inner-container .side-container{
+		display: none;
+	}
+	.right-then-center
+	{
+		text-align: center;
+	}
+	.left-then-center
+	{
+		text-align: center;
+	}
 
 
-.smaller
-{
-	text-align: center;
-}
-.smaller
-{
-	color: black;
-	margin-top: 0px !important;
-	margin-bottom: 0px !important;
-	margin-left: 3px !important;
-	margin-right: 3px !important;
-}
-.smaller i
-{
-	
-	margin-right: 30px !important;
-	margin-left: 30px !important;
-	
-}
-#home .arrows
-{
-	display: none;
-}
-.side-container{
-	height: auto !important;
-}
+	.smaller
+	{
+		text-align: center;
+	}
+	.smaller
+	{
+		color: black;
+		margin-top: 0px !important;
+		margin-bottom: 0px !important;
+		margin-left: 3px !important;
+		margin-right: 3px !important;
+	}
+	.smaller i
+	{
+		
+		margin-right: 30px !important;
+		margin-left: 30px !important;
+		
+	}
+	#home .arrows
+	{
+		display: none;
+	}
+	.side-container{
+		height: auto !important;
+	}
 
-.arrows{
-	text-align: center;
-}
+	.arrows{
+		text-align: center;
+	}
 
-#text{
-    text-align: center;
-   /* position: relative;*/
-   /* top: 40%;*/
-}
-.main-container
-{
-	position:fixed;
-	top:0;
-/*    		bottom:0;*/
-	left:0;
-	width: 100%;
-}
+	#text{
+	    text-align: center;
+	   /* position: relative;*/
+	   /* top: 40%;*/
+	}
+	.main-container
+	{
+		position:fixed;
+		top:0;
+	/*    		bottom:0;*/
+		left:0;
+		width: 100%;
+	}
 
-#info-bar{
-	display: none;
-}
+	#info-bar{
+		display: none;
+	}
 
-.more-info
-{
-	font-size: 20px !important;
-}
+	.more-info
+	{
+		font-size: 20px !important;
+	}
 
 }
 @media (min-width: 992px) {
-#smaller-info
-{
-	display: none;
-}
-.smaller{
-	display: none;
-}
-.right-then-center
-{
-	text-align: right;
-}
-.left-then-center
-{
-	text-align: left;
-}
-.arrows
-{
-	text-align: center;
-	width: 100%;
-	height: 100%;
-	vertical-align: middle;	
-    margin-bottom: 5px;
-}
-.side{
-    text-align: center;
-    position: relative;
-    top: 40%;
-	/*display:flex;*/
-	/*align-items: center;*/
+	#smaller-info
+	{
+		display: none;
+	}
+	.smaller{
+		display: none;
+	}
+	.right-then-center
+	{
+		text-align: right;
+	}
+	.left-then-center
+	{
+		text-align: left;
+	}
+	.arrows
+	{
+		text-align: center;
+		width: 100%;
+		height: 100%;
+		vertical-align: middle;	
+	    margin-bottom: 5px;
+	}
+	.side{
+	    text-align: center;
+	    position: relative;
+	    top: 40%;
+		/*display:flex;*/
+		/*align-items: center;*/
+	}
+
+	.main-container
+	{
+		position:fixed;
+		top:0;
+	/*    		bottom:0;*/
+		left:0;
+		width: 100%;
+	}
+
+	#text{
+	    text-align: center;
+	    position: relative;
+	    top: 40%;
+	}
+	#info-bar{
+	    background-color: rgba(100,100,100,1);
+	    width:100% !important;
+	    height:10%;
+	    
+	}
+	.more-info {
+		float: right;
+	}
+	.white
+	{
+		color: white !important;
+	}
+
 }
 
-.main-container
+.white
 {
-	position:fixed;
-	top:0;
-/*    		bottom:0;*/
-	left:0;
-	width: 100%;
-}
-
-#text{
-    text-align: center;
-    position: relative;
-    top: 40%;
-}
-#info-bar{
-    background-color: rgba(100,100,100,1);
-    width:100% !important;
-    height:10%;
-    
-}
-.more-info {
-	float: right;
-}
-
+	color: white !important;
 }    
 
 .inner-container
@@ -203,9 +215,13 @@ html
  /* width: 50px;
  *   height: 50px;*/
 }
+.white{
+	color: rgba(33,33,33,0.8);
+}
+
 #infoicons li a{
  /* color:#ee8811;*/
- color: rgba(255,255,255,1);
+ color: rgba(33,33,33,0.8);
   font-size: 30px;
   vertical-align: central;
   text-align: center; 
@@ -278,42 +294,42 @@ li > span{
 }
 
 @media (max-width: 401px ){
-.smaller
-{
-	color: black;
-	margin-top: 0px !important;
-	margin-bottom: 0px !important;
-	margin-left: 3px !important;
-	margin-right: 3px !important;
-}
-.smaller .fa-angle-left
-{
+	.smaller
+	{
+		color: black;
+		margin-top: 0px !important;
+		margin-bottom: 0px !important;
+		margin-left: 3px !important;
+		margin-right: 3px !important;
+	}
+	.smaller .fa-angle-left
+	{
 
-	margin-right: 20px !important;
-	margin-left: 0px !important;
+		margin-right: 20px !important;
+		margin-left: 0px !important;
 
-}
-.smaller .fa-angle-right
-{
+	}
+	.smaller .fa-angle-right
+	{
 
-	margin-right: 0px !important;
-	margin-left: 20px !important;
+		margin-right: 0px !important;
+		margin-left: 20px !important;
 
-}
-.moreinfos{
-	font-size: 15px !important;
-}
-#infoicons{
-	margin-left:-81px;
-}
+	}
+	.moreinfos{
+		font-size: 15px !important;
+	}
+	#infoicons{
+		margin-left:-81px;
+	}
 
 }
 
 .main-container{
-	background-color: rgba(255,255,255,0.95) !important;
+	background-color: rgba(255,255,255,0.85) !important;
 }
 #home{
-	background-color: rgba(255,255,255,0.875) !important;
+	background-color: rgba(255,255,255,0.775) !important;
 }
 
 @media (max-width: 990px ){
@@ -334,10 +350,10 @@ li > span{
 
 .inverse
 {
-	background-color: rgba(255,255,255,0.95) !important;
+	background-color: rgba(255,255,255,0.85) !important;
 }
 
-a{
+/*a{
 	color: #555!important;
-}
+}*/
 
