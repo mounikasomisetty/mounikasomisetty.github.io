@@ -1,0 +1,121 @@
+<html>
+	<head>
+    	<title>Tournament</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/bootstrap.css" rel="stylesheet">
+	    <link rel="stylesheet" href="font-awesome-4.1.0/css/font-awesome.min.css">
+	   
+     
+        <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.5.min.js" type="text/javascript"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js" type="text/javascript"></script>
+		<script src="js/bootstrap.js"></script>
+		<link href='http://fonts.googleapis.com/css?family=Lato:300,300italic' rel='stylesheet' type='text/css'>
+	</head>
+<style type="text/css">
+body
+{
+font-family: 'Lato', sans-serif;
+}
+</style>
+
+<body>
+
+<h2>[T5 - T6] A tournament of sorts!</h2>
+
+<h3>Some rules:</h3>
+
+<ul>
+<li>Teams of three!</li>
+<li>If you finish all three you may leave.</li>
+<li>Checking will be manual, but no hardcoding :P</li>
+<li>Try to use the solution with the smallest time complexity</li>
+</ul>
+
+<h4>Q1</h4>
+<p>Find out the maximum sub-array of non negative numbers from an array.</p>
+<p>The sub-array should be continuous. That is, a sub-array created by choosing the second and fourth element and skipping the third element is invalid.</p>
+
+<p>Maximum sub-array is defined in terms of the sum of the elements in the sub-array. Sub-array A is greater than sub-array B if sum(A) > sum(B).</p>
+
+<p>A : [1, 2, 5, -7, 2, 3]</p>
+<p>The two sub-arrays are [1, 2, 5] [2, 3].</p>
+<p>The answer is [1, 2, 5] as its sum is larger than [2, 3]</p>
+
+<p><b>NOTE: If there is a tie, then compare with segment's length and return segment which has maximum length</b></p>
+<p><b>NOTE 2: If there is still a tie, then return the segment with minimum starting index</b></p>
+
+<br>
+<p>Use the following function template</p>
+<pre>
+/**
+ * @input A : Integer array
+ * @input n1 : Integer array's ( A ) length
+ * 
+ * @Output Integer array. You need to malloc memory, and fill the length in length_of_array
+ */
+ int* maxset(int* A, int n1, int *length_of_array);
+</pre>
+
+<h4>Q2</h4>
+
+<p>You are given an n x n 2D matrix representing an image.</p>
+
+<p>Rotate the image by 90 degrees (clockwise).</p>
+
+<p>You need to do this in place.</p>
+
+<p>Note that if you end up using an additional array, you will only receive partial score.</p>
+
+<p>Use the following function template</p>
+<pre>
+/**
+ * @input A : 2D integer array 
+ * @input n11 : Integer array's ( A ) rows
+ * @input n12 : Integer array's ( A ) columns
+ * 
+ * @Output Void. Just modifies the args passed by reference 
+ */
+
+ void rotate(int** A, int n11, int n12);
+ </pre>
+
+ <h4>Q3</h4>
+
+<p>Reverse a linked list from position m to n. Do it in-place and in one-pass.</p>
+
+<p>For example:
+<p>Given 1->2->3->4->5->NULL, m = 2 and n = 4,</p>
+
+<p>return 1->4->3->2->5->NULL.</p>
+
+<p>Use the following information</p>
+<pre>
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     struct ListNode *next;
+ * };
+ * 
+ * typedef struct ListNode listnode;
+ * 
+ * listnode* listnode_new(int val) {
+ *     listnode* node = (listnode *) malloc(sizeof(listnode));
+ *     node->val = val;
+ *     node->next = NULL;
+ *     return node;
+ * }
+ */
+/**
+ * @input A : Head pointer of linked list 
+ * @input m : Integer
+ * @input n : Integer
+ * 
+ * @Output head pointer of list.
+ */
+listnode* reverseBetween(listnode* A, int m, int n);
+</pre>
+
+</body>
+</html>
