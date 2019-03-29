@@ -30,18 +30,18 @@ function heightChange()
     $('.main-container').css('width',width);
 }
 
-function keepChanging()
-{
-    $('#tagline').css('color','rgba(0,0,44,0.3)');
-    var taglines = ["You can't have everything. Where would you put it?"]
-    var i = 0;
-    var length = taglines.length;
-    setInterval(function(){ 
-        i = i%length;
-        $('#tagline').html(taglines[i]);
-        i++;
-    }, 5000);   
-}
+// function keepChanging()
+// {
+//     $('#tagline').css('color','rgba(0,0,44,0.3)');
+//     var taglines = ["You can't have everything. Where would you put it?"]
+//     var i = 0;
+//     var length = taglines.length;
+//     setInterval(function(){ 
+//         i = i%length;
+//         $('#tagline').html(taglines[i]);
+//         i++;
+//     }, 5000);   
+// }
 
 function aboutMe()
 {
