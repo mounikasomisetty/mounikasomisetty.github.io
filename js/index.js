@@ -4,7 +4,6 @@ $(document).ready(function(){
     // $('.main-container').css('height',height);
     $('body').css('background-image','url(images/home.jpg)')
     heightChange();
-    keepChanging();
     $('.more-info').click(function(){
         // $('#moreinfos').toggle();
         if ($(window).width() < 991)
@@ -13,13 +12,15 @@ $(document).ready(function(){
              $('#larger-moreinfos').fadeToggle();
     });
 
+    $('.beg').html('<i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>');
+    $('.inter').html('<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>');
+    $('.best').html('<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>');
+
     $( window ).resize(function() {
       heightChange();
     });
 
-    $('.beg').html('<i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>');
-    $('.inter').html('<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>');
-    $('.best').html('<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>');
+
 });
 
 function heightChange()
