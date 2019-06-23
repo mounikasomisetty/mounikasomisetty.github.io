@@ -1,62 +1,82 @@
 <!DOCTYPE html>
 <html>
-	<head>
-    	<title>Mounika Somisetty</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link href="css/bootstrap.min.css" rel="stylesheet">
-		<link href="css/bootstrap.css" rel="stylesheet">
-	    <link href="css/index.css" rel="stylesheet">
-         <link href="css/trial.css" rel="stylesheet">
-	    <link rel="stylesheet" href="font-awesome-4.1.0/css/font-awesome.min.css">
-	    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
-        <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.5.min.js" type="text/javascript"></script>
-        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js" type="text/javascript"></script>
-		<script src="js/bootstrap.js"></script>
-        <script src="js/index.js"></script>
-		<link href='http://fonts.googleapis.com/css?family=Lato:300,300italic' rel='stylesheet' type='text/css'>
-	</head>
-	<body>
-		<div class="main-container" id="home">
-			<div class="inner-container">
-                <div class="col-md-1 side-container">
-                    <h1 class="side arrows">
-                        <i class="fa fa-angle-left" onclick="moveLeft()"></i>
-                        <br>
-                        <span class="label">Projects</span>
-                    </h1>
-                </div>
-                <div class="col-md-10 main-main-container">
-                    <div class="col-md-12 small-container">
-                        <h1 class="arrows">
-                            <i class="fa fa-angle-up" onclick="moveUp()"></i>
-                            <br>
-                            <span class="label">About Me</span>
+
+<head>
+    <title>Mounika Somisetty</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+    <link href="css/trial.css" rel="stylesheet">
+    <link rel="stylesheet" href="font-awesome-4.1.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.5.min.js" type="text/javascript"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/index.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,300italic' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+    <div class="main-container" id="home">
+        <div class="inner-container">
+            <div class="col-md-1 side-container">
+                <h1 class="side arrows">
+                    <i class="fa fa-angle-left" onclick="moveLeft()"></i>
+                    <br>
+                    <span class="label">Projects</span>
+                </h1>
+            </div>
+            <div class="col-md-10 main-main-container">
+                <div class="col-md-12 content-container">
+                    <div class="inner-container middle-thing">
+                        <h1 class="smaller">
+                            <span class="label">Projects</span>
+                            <i class="fa fa-angle-left" onclick="moveLeft()"></i>
+                            <i class="fa fa-angle-right" onclick="moveRight()"></i>
+                            <span class="label">Resume</span>
                         </h1>
-                    </div>
-                    <div class="col-md-12 content-container" >
-                          <div class="inner-container middle-thing">
-                             <h1 class="smaller">
-                                <span class="label">About Me</span>
-                                <br>
-                                <i class=" smaller fa fa-angle-up" onclick="moveUp()"></i>
-                            </h1>
-                            <h1 class="smaller">
-                                <span class="label">Projects</span>
-                                <i class="fa fa-angle-left" onclick="moveLeft()"></i>
-                                <i class="fa fa-angle-right" onclick="moveRight()"></i>
-                                <span class="label">Resume</span>
-                            </h1>
+                        <br>
+                        <h1 id="text">
+                            Hi! I'm Mounika Somisetty!
                             <br>
-                            <h1 id="text">
-                                Hi! I'm Mounika Somisetty!
-                                <br>
-                                <span id="tagline">Software Developer II at FedEx Services</span>
-                                <br>
-                                <span id="smaller-info" class="more-info white">
-                                    <i class="fa fa-info-circle"></i>
-                                </span>
-                            </h1>
-                             <ul id="infoicons">
+                            <span id="tagline">Software Developer II at FedEx Services</span>
+                            <br>
+                            <br>
+                            <span id="smaller-info" class="more-info">
+                                <div class="row">
+                                    <div class="col-md-4"></div>
+                                    <div class="col-md-4" style="font-size:20px">
+                                            At the age of ten, I had a school project in which I was asked to design a house. It was then that I learned what an architect is. It sounded like the perfect job. It incorporated my two favorite things, design and math. Down the line, I realized all engineering, not just architecture, is full of the same kind of creativity, design, science, and math. During my first CS course, I saw how make or break these were to software systems, and applications. Including, how everything is constructed from very basic logical building blocks. Almost like a house!
+                                            
+                                            <div class="row" style="margin-top:20px;">
+                                                    <div class="col-md-3" id="email">
+                                                        <a href="#" class="contacticon" data-toggle="tooltip" data-placement="top" title="mounikas@gmail.com">
+                                                            <i class="fa fa-envelope-o"></i>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-3" id="icon_home">
+                                                        <a href="https://github.com/mounikasomisetty" class="contacticon">
+                                                            <i class="fa fa-github"></i>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <a href="https://www.facebook.com/mounikasomisetty" class="contacticon">
+                                                            <i class="fa fa-facebook"></i>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <a href="https://www.linkedin.com/pub/mounika-somisetty/99/193/b02" class="contacticon">
+                                                            <i class="fa fa-linkedin"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                    </div>
+                                    <div class="col-md-4"></div>
+                                </div>
+                                    </span>
+                        </h1>
+                        <!-- <ul id="infoicons">
                             <span class="moreinfos white" id="smaller-moreinfos">
                                 <li id="email">
                                     <a href="#">
@@ -84,245 +104,288 @@
                                     </a>
                                 </li>
                             </span>
-                        </ul>
-                        </div>
+                        </ul> -->
                     </div>
                 </div>
-                <div class="col-md-1 side-container">
-                    <h1 class="side arrows">
-                        <i class="fa fa-angle-right" onclick="moveRight()"></i>
-                        <br>
-                        <span class="label">Resume</span>
-                    </h1>
-                </div>
             </div>
-            <div id="info-bar">
-                <div class="col-md-12">
-                    <h1>
-                       <span class="more-info">
-                           <i class="fa fa-info-circle"></i>
-                       </span>
-                        <ul class="arrows" id="infoicons">
-                            <span class="moreinfos" id="larger-moreinfos">
-                                <li id="email">
-                                    <a href="#">
-                                        <i class="fa fa-envelope-o"></i>
-                                    </a>
-                                </li>
-                                <li id="icon_home">
-                                    <a href="https://github.com/mounikasomisetty">
-                                        <i class="fa fa-github"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://www.facebook.com/mounikasomisetty">
-                                        <i class="fa fa-facebook"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://plus.google.com/u/0/+MounikaSomisetty">
-                                        <i class="fa fa-google-plus"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://www.linkedin.com/pub/mounika-somisetty/99/193/b02">
-                                        <i class="fa fa-linkedin"></i>
-                                    </a>
-                                </li>
-                            </span>
-                        </ul>
-                    </h1>
-                </div>
+            <div class="col-md-1 side-container">
+                <h1 class="side arrows">
+                    <i class="fa fa-angle-right" onclick="moveRight()"></i>
+                    <br>
+                    <span class="label">Resume</span>
+                </h1>
             </div>
-		</div>
-        <!-- Resume Section -->
-        <div class="main-container" id="resume" style="display:none;">
-            <div class="inner-container">
-                <div class="col-md-1 side-container">
-                    <h1 class="side arrows">
-                        <i class="fa fa-angle-left" onclick="moveBackRight()"></i>
-                        <br>
-                        <span class="label">Home</span>
-                    </h1>
-                </div>
-                <div class="col-md-11 main-main-container" style="overflow-x:scroll;">
-                    <div class="inverse-i" id="inverse">
+        </div>
+        <!-- <div id="info-bar">
+            <div class="col-md-12">
+                <h1>
+                    <span class="more-info">
+                        <i class="fa fa-info-circle"></i>
+                    </span>
+                    <ul class="arrows" id="infoicons">
+                        <span class="moreinfos" id="larger-moreinfos">
+                            <li id="email">
+                                <a href="#">
+                                    <i class="fa fa-envelope-o"></i>
+                                </a>
+                            </li>
+                            <li id="icon_home">
+                                <a href="https://github.com/mounikasomisetty">
+                                    <i class="fa fa-github"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.facebook.com/mounikasomisetty">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://plus.google.com/u/0/+MounikaSomisetty">
+                                    <i class="fa fa-google-plus"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/pub/mounika-somisetty/99/193/b02">
+                                    <i class="fa fa-linkedin"></i>
+                                </a>
+                            </li>
+                        </span>
+                    </ul>
+                </h1>
+            </div>
+        </div> -->
+    </div>
+    <!-- Resume Section -->
+    <div class="main-container" id="resume" style="display:none;">
+        <div class="inner-container">
+            <!-- <div class="col-md-1 side-container">
+                <h1 class="side arrows">
+                    <i class="fa fa-angle-left" onclick="moveBackRight()"></i>
+                    <br>
+                    <span class="label">Home</span>
+                </h1>
+            </div> -->
+            <div class="col-md-12 main-main-container" style="overflow-y:scroll;">
+                <div class="inverse-i" id="inverse">
                     <div class="inverse">
-                    <div class="inverse-text-holder">
-                        <h1 class="holderoftext" id="textgoeshere">RESUME</h1>
-                    </div>
-                    </div>
-                    </div>
-                    <!-- <hr> -->
-                   <!--  <h5 style="text-align:right;">You can find the 1-page PDF format (needs update) <a href="documents/MounikaSomisetty_13thSeptember2015.pdf">here</a></h5>
-                    <h5 style="text-align:right;">You can find the 2-page PDF format (Overseas) <a href="documents/MSomisettyUSM.pdf">here</a></h5>
-                    <h5 style="text-align:right;">You can find the 2-page PDF format (India) <a href="documents/MSomisetty.pdf">here</a></h5> -->
-                    <div class="row">
-                        <div class="col-md-12">
-                            <h1 class="heading">Education</h1>
-                            <hr>
-                            <div class="row box">
-                                <div class="col-md-1"></div>
-                                <div class="col-md-5">
-                                    <h4 class="right-then-center">
-                                        <b>International Institute of Information Technology, Hyderabad</b>
-                                    </h4>
-                                </div>
-                                <div class="col-md-5">
-                                    <h4 class="left-then-center"><b>Bachelor of Technology in Computer Science Engineering</b></h4>
-                                    <h4 class="left-then-center"> August 2013 - May 2017</h4>
-                                    <h4 class="left-then-center">
-                                        Courses include: Computer Programming, IT Workshop I, Data Structures, Computer System Organization, Algorithms, Operating Systems, Introduction to Databases, Structed System Analysis and Design & Project, Formal Methods, Engineering Systems, Artificial Intelligence, Graphics, Digital Signal Anaylsis and Applications, Computer Networks, Compilers, Statistical Methods in AI, Game Design and Engineering, Digital Image Processing, Database Systems, Linear Algebra, Computer Vision, Advanced Computer Networks, Multi Agent Systems, Principles of Information Security, Optimization Methods
-                                    </h4>
-                                     <h4 class="left-then-center">
-                                        CGPA : 9.36/10.0
-					Finished in the top 5 of class
-                                    </h4>
-                                </div>
-                                 <div class="col-md-1"></div>
-                            </div>
-                            <div class="row box">
-                                <div class="col-md-1"></div>
-                                <div class="col-md-5">
-                                    <h4 class="right-then-center">
-                                        <b>FIITJEE, Kukatpally Centre, Hyderabad</b>
-                                    </h4>
-                                </div>
-                                <div class="col-md-5">
-                                    <h4 class="left-then-center">Andhra Pradesh Board: Maths, Physics and Chemistry</h4>
-                                    <h4 class="left-then-center">Senior Secondary</h4>
-                                    <h4 class="left-then-center">
-                                    Graduated with a score of 972/1000</h4>
-                                </div>
-                                 <div class="col-md-1"></div>
-                            </div>
-                             <div class="row box">
-                                <div class="col-md-1"></div>
-                                <div class="col-md-5">
-                                    <h4 class="right-then-center">
-                                        <b>Orchids - The International School, Hyderabad</b>
-                                    </h4>
-                                </div>
-                                <div class="col-md-5">
-                                    <h4 class="left-then-center">Central Board of Secondary Education</h4>
-                                    <h4 class="left-then-center">10th Grade</h4>
-                                    <h4 class="left-then-center">
-                                     Graduated with a GPA of 10.0/10.0</h4>
-                                </div>
-                                 <div class="col-md-1"></div>
-                            </div>
+                        <div class="inverse-text-holder">
+                                <!-- <div class="col-md-1 side-container">
+                                        <h1 class="side arrows">
+                                            <i class="fa fa-angle-left" onclick="moveBackRight()"></i>
+                                            <br>
+                                            <span class="label">Home</span>
+                                        </h1>
+                                    </div> -->
+                            <h1 class="holderoftext" id="textgoeshere"> <span onclick="moveBackRight()"> < </span> RESUME</h1>
                         </div>
-                        <div class="col-md-12">
-                            <h1 class="heading">Work Experience</h1>
-                            <hr>
-                            <div class="row box">
-                                 <div class="col-md-1"></div>
-                                 <div class="col-md-5">
-                                    <h4 class="right-then-center">
-                                        <b>Software Developer I, FedEx Services</b>
-                                    </h4>
-                                    <h4 class="right-then-center"> December 2017 - Present</h4>
-                                </div>
-                                 <div class="col-md-5">
-                                    <h4 class="left-then-center">Ground Package Routing Systems</h4>
-                                    <!-- <ul>
+                    </div>
+                </div>
+                <hr>
+                <!-- <h5 style="text-align:right;">You can find the 1-page PDF format (needs update) <a href="documents/MounikaSomisetty_13thSeptember2015.pdf">here</a></h5> -->
+                <!-- <h5 style="text-align:right;">You can find the 2-page PDF format (Overseas) <a href="documents/MSomisettyUSM.pdf">here</a></h5> -->
+                <h5 style="text-align:right;">You can find the 2-page PDF format <a
+                        href="documents/June2019Resume">here</a></h5>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="heading">Education</h1>
+                        <hr>
+                        <div class="row box">
+                            <div class="col-md-1"></div>
+                            <div class="col-md-5">
+                                <h4 class="right-then-center">
+                                    <b>International Institute of Information Technology, Hyderabad</b>
+                                </h4>
+                            </div>
+                            <div class="col-md-5">
+                                <h4 class="left-then-center"><b>Bachelor of Technology in Computer Science
+                                        Engineering</b></h4>
+                                <h4 class="left-then-center"> August 2013 - May 2017</h4>
+                                <h4 class="left-then-center">
+                                    Courses include: Computer Programming, IT Workshop I, Data Structures, Computer
+                                    System Organization, Algorithms, Operating Systems, Introduction to Databases,
+                                    Structed System Analysis and Design & Project, Formal Methods, Engineering Systems,
+                                    Artificial Intelligence, Graphics, Digital Signal Anaylsis and Applications,
+                                    Computer Networks, Compilers, Statistical Methods in AI, Game Design and
+                                    Engineering, Digital Image Processing, Database Systems, Linear Algebra, Computer
+                                    Vision, Advanced Computer Networks, Multi Agent Systems, Principles of Information
+                                    Security, Optimization Methods
+                                </h4>
+                                <h4 class="left-then-center">
+                                    CGPA : 9.36/10.0
+                                    Finished in the top 5 of the class
+                                </h4>
+                            </div>
+                            <div class="col-md-1"></div>
+                        </div>
+                        <div class="row box">
+                            <div class="col-md-1"></div>
+                            <div class="col-md-5">
+                                <h4 class="right-then-center">
+                                    <b>FIITJEE, Kukatpally Centre, Hyderabad</b>
+                                </h4>
+                            </div>
+                            <div class="col-md-5">
+                                <h4 class="left-then-center">Andhra Pradesh Board: Maths, Physics and Chemistry</h4>
+                                <h4 class="left-then-center">Senior Secondary</h4>
+                                <h4 class="left-then-center">
+                                    Graduated with a score of 972/1000</h4>
+                            </div>
+                            <div class="col-md-1"></div>
+                        </div>
+                        <div class="row box">
+                            <div class="col-md-1"></div>
+                            <div class="col-md-5">
+                                <h4 class="right-then-center">
+                                    <b>Orchids - The International School, Hyderabad</b>
+                                </h4>
+                            </div>
+                            <div class="col-md-5">
+                                <h4 class="left-then-center">Central Board of Secondary Education</h4>
+                                <h4 class="left-then-center">10th Grade</h4>
+                                <h4 class="left-then-center">
+                                    Graduated with a GPA of 10.0/10.0</h4>
+                            </div>
+                            <div class="col-md-1"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <h1 class="heading">Work Experience</h1>
+                        <hr>
+                        <div class="row box">
+                            <div class="col-md-1"></div>
+                            <div class="col-md-5">
+                                <h4 class="right-then-center">
+                                    <b>Software Developer II, FedEx Services</b>
+                                </h4>
+                                <h4 class="right-then-center"> December 2018 - Present</h4>
+                            </div>
+                            <div class="col-md-5">
+                                <h4 class="left-then-center">Ground Package Routing Systems</h4>
+                                <ul>
+                                    <li>Helping moderinize the FedEx Ground network by building cloud-based spring boot
+                                        microservices!</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-1"></div>
+                        </div>
+                        <div class="row box">
+                            <div class="col-md-1"></div>
+                            <div class="col-md-5">
+                                <h4 class="right-then-center">
+                                    <b>Software Developer I, FedEx Services</b>
+                                </h4>
+                                <h4 class="right-then-center"> December 2017 - December 2018</h4>
+                            </div>
+                            <div class="col-md-5">
+                                <h4 class="left-then-center">Ground Package Routing Systems</h4>
+                                <!-- <ul>
+                                        <li></li>
+                                        <li></li>
+                                    </ul> -->
+                            </div>
+                            <div class="col-md-1"></div>
+                        </div>
+                        <div class="row box">
+                            <div class="col-md-1"></div>
+                            <div class="col-md-5">
+                                <h4 class="right-then-center">
+                                    <b>Associate Engineer, Qualcomm</b>
+                                </h4>
+                                <h4 class="right-then-center">July 2017 - November 2017</h4>
+                            </div>
+                            <div class="col-md-5">
+                                <h4 class="left-then-center">Windows Camera Team</h4>
+                                <!-- <ul>
                                         <li></li>
                                         <li>Assisted with exam and quiz paper correction</li>
                                     </ul> -->
-                                </div>
-                                 <div class="col-md-1"></div>
                             </div>
-                            <div class="row box">
-                                 <div class="col-md-1"></div>
-                                 <div class="col-md-5">
-                                    <h4 class="right-then-center">
-                                        <b>Associate Engineer, Qualcomm</b>
-                                    </h4>
-                                    <h4 class="right-then-center">July 2017 - November 2017</h4>
-                                </div>
-                                 <div class="col-md-5">
-                                    <h4 class="left-then-center">Windows Camera Team</h4>
-                                    <!-- <ul>
-                                        <li></li>
-                                        <li>Assisted with exam and quiz paper correction</li>
-                                    </ul> -->
-                                </div>
-                                 <div class="col-md-1"></div>
+                            <div class="col-md-1"></div>
+                        </div>
+                        <div class="row box">
+                            <div class="col-md-1"></div>
+                            <div class="col-md-5">
+                                <h4 class="right-then-center">
+                                    <b>Teaching Assistant, IIIT Hyderabad</b>
+                                </h4>
+                                <h4 class="right-then-center">August 2016 - December 2016</h4>
                             </div>
-                            <div class="row box">
-                                 <div class="col-md-1"></div>
-                                 <div class="col-md-5">
-                                    <h4 class="right-then-center">
-                                        <b>Teaching Assistant, IIIT Hyderabad</b>
-                                    </h4>
-                                    <h4 class="right-then-center">August 2016 - December 2016</h4>
-                                </div>
-                                 <div class="col-md-5">
-                                    <h4 class="left-then-center">Teaching Assistant for the course Statistical Methods in Artifical Intelligence under Prof. Avinash Sharma</h4>
-                                    <ul>
-                                        <li>Project mentor for eight teams doing Pattern Recognition projects like Image Style Transfer, GIF generation etc</li>
-                                        <li>Assisted with exam and quiz paper correction</li>
-                                    </ul>
-                                </div>
-                                 <div class="col-md-1"></div>
+                            <div class="col-md-5">
+                                <h4 class="left-then-center">Teaching Assistant for the course Statistical Methods in
+                                    Artifical Intelligence under Prof. Avinash Sharma</h4>
+                                <ul>
+                                    <li>Project mentor for eight teams doing Pattern Recognition projects like Image
+                                        Style Transfer, GIF generation etc</li>
+                                    <li>Assisted with exam and quiz paper correction</li>
+                                </ul>
                             </div>
-                            <div class="row box">
-                                 <div class="col-md-1"></div>
-                                 <div class="col-md-5">
-                                    <h4 class="right-then-center">
-                                        <b>Full Stack Developer, Samsung Research Institute - Bangalore</b>
-                                    </h4>
-                                    <h4 class="right-then-center">May 2016 - July 2016</h4>
-                                </div>
-                                 <div class="col-md-5">
-                                    <h4 class="left-then-center">Worked as part of the Web Services team to add a feature to the SBrowser App using Node.js and Android</h4>
-                                </div>
-                                 <div class="col-md-1"></div>
+                            <div class="col-md-1"></div>
+                        </div>
+                        <div class="row box">
+                            <div class="col-md-1"></div>
+                            <div class="col-md-5">
+                                <h4 class="right-then-center">
+                                    <b>Full Stack Developer, Samsung Research Institute - Bangalore</b>
+                                </h4>
+                                <h4 class="right-then-center">May 2016 - July 2016</h4>
                             </div>
-                            <div class="row box">
-                                 <div class="col-md-1"></div>
-                                 <div class="col-md-5">
-                                    <h4 class="right-then-center">
-                                        <b>Teaching Assistant, IIIT Hyderabad</b>
-                                    </h4>
-                                    <h4 class="right-then-center">August 2015 - December 2015</h4>
-                                </div>
-                                 <div class="col-md-5">
-                                    <h4 class="left-then-center">Teaching Assistant for the course Computer Programming under Prof. Anoop M. Namboodiri</h4>
-                                    <ul>
-                                        <li>Led lab sessions for a class of 60 students</li>
-                                        <li>Assisted with exam paper correction and lab exams</li>
-                                    </ul>
-                                </div>
-                                 <div class="col-md-1"></div>
+                            <div class="col-md-5">
+                                <h4 class="left-then-center">Worked as part of the Web Services team to add a feature to
+                                    the SBrowser App using Node.js and Android</h4>
                             </div>
-                            <div class="row box">
-                                <div class="col-md-1"></div>
-                                <div class="col-md-5">
-                                    <h4 class="right-then-center">
-                                        <b>Web Designer, <a href="http://mounikasomisetty.github.io/TierraSeedScience/html/">Tierra Seed Science</a></b>
-                                    </h4>
-                                    <h4 class="right-then-center">May 2015 - June 2015</h4>
-                                </div>
-                                <div class="col-md-5">
-                                    <h4 class="left-then-center">Redesigned the GUI for company’s main website and implemented a python-based content management system for the same.</h4>
-                                </div>
-                                 <div class="col-md-1"></div>
+                            <div class="col-md-1"></div>
+                        </div>
+                        <div class="row box">
+                            <div class="col-md-1"></div>
+                            <div class="col-md-5">
+                                <h4 class="right-then-center">
+                                    <b>Teaching Assistant, IIIT Hyderabad</b>
+                                </h4>
+                                <h4 class="right-then-center">August 2015 - December 2015</h4>
                             </div>
-                            <div class="row box">
-                                <div class="col-md-1"></div>
-                                <div class="col-md-5">
-                                    <h4 class="right-then-center">
-                                        <b>Software Development Intern, Computer Generated Solutions</b>
-                                    </h4>
-                                    <h4 class="right-then-center">May 2014 - July 2014</h4>
-                                </div>
-                                <div class="col-md-5">
-                                    <h4 class="left-then-center">As part of the internship, developed a web recruitment application to ease the process of hiring and interviewing potential employees using ASP.NET; Redesigned the GUI for company’s current employee portal using Razor C#, also, lead the team.</h4>
-                                </div>
-                                 <div class="col-md-1"></div>
+                            <div class="col-md-5">
+                                <h4 class="left-then-center">Teaching Assistant for the course Computer Programming
+                                    under Prof. Anoop M. Namboodiri</h4>
+                                <ul>
+                                    <li>Led lab sessions for a class of 60 students</li>
+                                    <li>Assisted with exam paper correction and lab exams</li>
+                                </ul>
                             </div>
-                           <!--  <div class="row box">
+                            <div class="col-md-1"></div>
+                        </div>
+                        <div class="row box">
+                            <div class="col-md-1"></div>
+                            <div class="col-md-5">
+                                <h4 class="right-then-center">
+                                    <b>Web Designer, <a
+                                            href="http://mounikasomisetty.github.io/TierraSeedScience/html/">Tierra Seed
+                                            Science</a></b>
+                                </h4>
+                                <h4 class="right-then-center">May 2015 - June 2015</h4>
+                            </div>
+                            <div class="col-md-5">
+                                <h4 class="left-then-center">Redesigned the GUI for company’s main website and
+                                    implemented a python-based content management system for the same.</h4>
+                            </div>
+                            <div class="col-md-1"></div>
+                        </div>
+                        <div class="row box">
+                            <div class="col-md-1"></div>
+                            <div class="col-md-5">
+                                <h4 class="right-then-center">
+                                    <b>Software Development Intern, Computer Generated Solutions</b>
+                                </h4>
+                                <h4 class="right-then-center">May 2014 - July 2014</h4>
+                            </div>
+                            <div class="col-md-5">
+                                <h4 class="left-then-center">As part of the internship, developed a web recruitment
+                                    application to ease the process of hiring and interviewing potential employees using
+                                    ASP.NET; Redesigned the GUI for company’s current employee portal using Razor C#,
+                                    also, lead the team.</h4>
+                            </div>
+                            <div class="col-md-1"></div>
+                        </div>
+                        <!--  <div class="row box">
                                 <div class="col-md-1"></div>
                                 <div class="col-md-5">
                                     <h4 class="right-then-center">
@@ -335,549 +398,544 @@
                                 </div>
                                  <div class="col-md-1"></div>
                             </div> -->
-                        </div>
-                        <div class="col-md-12">
-                            <h1 class="heading">Skills</h1>
-                            <hr>
-                            <div class="row">
-                                <div class="col-md-2"></div>
-                                <div class="col-md-8">
+                    </div>
+                    <div class="col-md-12">
+                        <h1 class="heading">Skills</h1>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-8">
                                 <h3 style="text-align:center">Programming</h3>
                                 <hr>
                                 <ul class="skillslist">
-                                    <li>C 
-                                       <span class="best"></span>
+                                    <li>C
+                                        <span class="best"></span>
                                     </li>
-                                    <li>Python 
-                                       <span class="best"></span>
+                                    <li>Python
+                                        <span class="best"></span>
                                     </li>
-                                    <li>C++ 
-                                       <span class="inter"></span>
-                                    </li>
-                                    <li>Ruby 
+                                    <li>C++
                                         <span class="inter"></span>
                                     </li>
-                                    <li>C# 
-                                       <span class="inter"></span>
+                                    <li>Ruby
+                                        <span class="inter"></span>
                                     </li>
-                                    <li>Java(Android) 
-                                        <span class="beg"></span>
+                                    <li>C#
+                                        <span class="inter"></span>
                                     </li>
-                                    <li>Bash Scripting 
-                                       <span class="best"></span>
+                                    <li>Java
+                                        <span class="inter"></span>
                                     </li>
-                                    <li>Matlab 
+                                    <li>Spring boot & Spring beans
+                                        <span class="inter"></span>
+                                    </li>
+                                    <li>Bash Scripting
+                                        <span class="best"></span>
+                                    </li>
+                                    <li>Matlab
                                         <span class="best"></span>
                                     </li>
                                     <br>
                                     <li><u>Mobile</u></li>
-                                    <li>Android 
+                                    <li>Android
                                         <span class="beg"></span>
                                     </li>
-                                    <li>Windows Mobile Development 
+                                    <li>Windows Mobile Development
                                         <span class="beg"></span>
                                     </li>
                                     <br>
-                                    <li><u>Operating Systems</u><li>
-                                        <li>Linux, Windows and MacOS 
-                                           <span class="best"></span>
-                                        </li>
+                                    <li><u>Operating Systems</u>
+                                    <li>
+                                    <li>Linux, Windows and MacOS
+                                        <span class="best"></span>
+                                    </li>
                                     </li>
                                 </ul>
-                                </div>
-                                <div class="col-md-2"></div>
                             </div>
-                            <div class="row">
-                                <div class="col-md-2"></div>
-                                <div class="col-md-8">
-                                    <h3 style="text-align:center">Web</h3>
-                                    <hr>
-                                    <ul class="skillslist">
-                                        <li>HTML 
-                                           <span class="best"></span>
-                                        </li>
-                                        <li>CSS 
-                                           <span class="best"></span>
-                                        </li>
-                                        <li>Javascript 
-                                            <span class="inter"></span>
-                                        </li>
-                                        <li>jQuery 
-                                           <span class="best"></span>
-                                        </li>
-                                        <li>Bootstrap Framework 
-                                           <span class="best"></span>
-                                        </li>
-                                        <li>Foundation Framework 
-                                           <span class="inter"></span>
-                                        </li>
-                                        <li>PHP 
-                                            <span class="beg"></span>
-                                        </li>
-                                        <li>mySQL 
-                                           <span class="best"></span>
-                                        </li>
-                                        <li>Web Development (Frameworks)</li>
-                                        <ul>
-                                            <li>Ruby on Rails 
-                                                <span class="beg"></span>
-                                            </li>
-                                            <li>Django 
-                                               <span class="inter"></span>
-                                            </li>
-                                            <li>ASP.NET 
-                                               <span class="inter"></span>
-                                            </li>
-                                        </ul>
-                                        <li>C# with .NET Framework 
-                                           <span class="inter"></span>
-                                        </li>
-                                        <li>Razor C# 
-                                            <span class="inter"></span>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="col-md-2"></div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-2"></div>
-                                <div class="col-md-8">
-                                    <h3 style="text-align:center">Misc.</h3><hr>
-                                    <ul class="skillslist">
-                                        <li>Software Development Life Cycle 
-                                           <span class="best"></span>
-                                         </li>
-                                            <ul>
-                                                <li>Testing like Nosetests 
-                                                    <span class="inter"></span>
-                                                </li>
-                                                <li>Code Reviewing 
-                                                <span class="inter"></span>
-                                            </li>
-                                            </ul>
-                                        <li>OpenGL 2 
-                                            <span class="inter"></span>
-                                        </li>
-                                        <li>OpenGL 3 
-                                            <span class="inter"></span>
-                                        </li>
-                                        <li>ARM Assembly 
-                                            <span class="beg"></span>
-                                        </li>
-                                        <li>Collaboration tools and version control like Github and Bitbucket 
-                                           <span class="inter"></span>
-                                        </li>
-                                        <li>Debugging tools such as gdb 
-                                           <span class="inter"></span>
-                                        </li>
-                                        <li>Eclipse and Android Studio 
-                                            <span class="beg"></span>
-                                        </li>
-                                        <li>Microsoft Visual Studio and Microsoft SQL Server 
-                                            <span class="inter"></span>
-                                        </li>
-                                    </ul>
-                                  </div>
-                                <div class="col-md-2"></div>
-                            </div>
+                            <div class="col-md-2"></div>
                         </div>
-                        <div class="col-md-12">
-                             <h1 class="heading">Other Stuff</h1>
-                                    <hr>
-                            <div class="row">
-                                <div class="col-md-2"></div>
-                                <div class="col-md-8">
-                                    <ul class="extra_stuff">
-                                        <li>Dean's List from 2013 - 2017</li>
-                                        <li>Runner's Up in Microsoft's Code. Fun. Do. Campus Hackathon</li>
-                                        <li>Member of the Constitution Drafting Committee at IIIT-H</li>
-                                        <li>Member of the Student Academic Council at IIIT-H</li>
-                                        <li>Member of the Apex Body at IIIT-H</li>
-                                        <li>Editor-in-Chief of the College Magazine, <a href="http://ping.iiit.ac.in">Ping!</a>, at IIIT-H</li>
-                                        <li>School Captain, Orchids - The International School, 2010-2011.</li>
-                                        <li>House Vice Captain Orchids - The International School, 2009-2010</li>
-                                        <li>Assisted on the Android application for Felicity! - IIIT-H's college fest</li>
-                                        <li>Ranked 3rd in the state in the National Cyber Olympiad in 2011</li>
-                                        <li>Ranked 3rd internationally in the International English Olympiad in 2011</li>
-                                        <li>Ranked 6th internationally in the International English Olympiad in 2012 </li>
-                                        <li>Volunteer at The Guardian Circle, Hyderabad Chapter.</li>
-                                        <li>Awarded distinction in the Trinity College Exam in Electronic Keyboard, for Grade 1, Grade 2 and Grade 3</li>
-                                        <li>Active in painting, writing and dance</li>
-                                    </ul>
-                                </div>
-                                <div class="col-md-2"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Project Section -->
-        <div class="main-container" id="project" style="display:none;">
-            <div class="inner-container">
-                <div class="col-md-11 main-main-container" style="overflow-x:scroll;">
-                    <div class="inverse-i" id="inverse">
-                    <div class="inverse">
-                    <div class="inverse-text-holder">
-                        <h1 class="holderoftext" id="textgoeshere">PROJECTS</h1>
-                    </div>
-                    </div>
-                    </div>
-                    <hr>
-                    <h1 class="heading">School</h1>
-                    <hr>
-                     <div class="row box">
-                        <div class="col-md-2"></div>
-                        <div class="col-md-8"> 
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <h4 class="right-then-center">
-                                        Automated Negotiation Bot, IIIT-H
-                                    </h4>
-                                    <h4 class="right-then-center">
-                                        August 2016 - November 2016
-                                    </h4>
-                                </div>
-                                <div class="col-md-6">
-                                    <h4 class="left-then-center">
-                                        Designed a negotiating agent for a realistic domain based on the GENIUS platform, capable of performing multiparty negotiation; also, was the tournament winner in the classroom setting.
-                                    </h4>
-                                    <h4 class = "left-then-center">
-                                        Have a look at the report for the random agent beater <a href="documents/mas-random.pdf">here</a> and the final bot <a href="documents/mas-final">here</a>
-                                    </h4>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-2"></div>
-                    </div>
-                     <div class="row box">
-                        <div class="col-md-2"></div>
-                        <div class="col-md-8"> 
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <h4 class="right-then-center">
-                                       Discriminative Blur Detection Features, IIIT-H
-                                    </h4>
-                                    <h4 class="right-then-center">
-                                        August 2015 - November 2015
-                                    </h4>
-                                </div>
-                                <div class="col-md-6">
-                                    <h4 class="left-then-center">
-                                        Implemented a research paper by Shi et al published in CVPR’14. The paper explores representations of an image to discriminate between blurred and unblurred regions. We also look at methods by other researchers. 
-                                    </h4>
-                                    <h4 class = "left-then-center">
-                                        Have a look at the report <a href="documents/blur-detection-features.pdf">here</a>
-                                    </h4>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-2"></div>
-                    </div>
-                     <div class="row box">
-                        <div class="col-md-2"></div>
-                        <div class="col-md-8"> 
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <h4 class="right-then-center">
-                                        The Flip Side (A Board Game), IIIT-H
-                                    </h4>
-                                    <h4 class="right-then-center">
-                                        August 2015 - November 2015
-                                    </h4>
-                                </div>
-                                <div class="col-md-6">
-                                    <h4 class="left-then-center">
-                                        Created and designed a working prototype of a board game called "The Flip Side" for the Game Design and Engineering Course.
-                                    </h4>
-                                     <h4 class = "left-then-center">
-                                        Have a look at the rules <a href="documents/the-flip-side.pdf">here</a>
-                                    </h4>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-2"></div>
-                    </div>
-                     <div class="row box">
-                        <div class="col-md-2"></div>
-                        <div class="col-md-8"> 
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <h4 class="right-then-center">
-                                        LLVM Compiler, IIIT-H
-                                    </h4>
-                                    <h4 class="right-then-center">
-                                        August 2015 - November 2015
-                                    </h4>
-                                </div>
-                                <div class="col-md-6">
-                                    <h4 class="left-then-center">
-                                        Worked in a team to create a compiler using Flex, Bision and C++ for Decaf Language that creates an LLVM assembly output.
-                                    </h4>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-2"></div>
-                    </div>
-                     <div class="row box">
-                        <div class="col-md-2"></div>
-                        <div class="col-md-8"> 
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <h4 class="right-then-center">
-                                        Handwriting Recognition, IIIT-H
-                                    </h4>
-                                    <h4 class="right-then-center">
-                                        August 2015 - November 2015
-                                    </h4>
-                                </div>
-                                <div class="col-md-6">
-                                    <h4 class="left-then-center">
-                                        Created a system, that converts a document of handwritten words to textual output using a Convolution Neural Network and Hidden Markov Model, in Matlab and Python.
-                                    </h4>
-                                     <h4 class = "left-then-center">
-                                        Have a look at the report <a href="documents/handwriting.pdf">here</a>
-                                    </h4>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-2"></div>
-                    </div>
-
-
-                    <div class="row box">
-                        <div class="col-md-2"></div>
-                        <div class="col-md-8"> 
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <h4 class="right-then-center">
-                                        Machine Learning Based Tour Guide, Center for Visual Information Technology
-                                    </h4>
-                                    <h4 class="right-then-center">
-                                        May 2015 - July 2015
-                                    </h4>
-                                </div>
-                                <div class="col-md-6">
-                                    <h4 class="left-then-center">
-                                        Developed, as part of a team, a mobile application that acts like a tour guide for visitors to the campus based on the pictures they take, using machine learning and image processing techniques, using MATLAB.
-                                    </h4>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-2"></div>
-                    </div>
-                    <div class="row box">
-                        <div class="col-md-2"></div>
-                        <div class="col-md-8"> 
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <h4 class="right-then-center">
-                                        <a href="https://github.com/mrinaldhar/p2p-fileshare">TCP/IP Server Client File Sharing Network</a>, IIIT-H
-                                    </h4>
-                                    <h4 class="right-then-center">
-                                        March 2015
-                                    </h4>
-                                </div>
-                                <div class="col-md-6">
-                                    <h4 class="left-then-center">
-                                        Worked in a team to create a multi-purpose file transfer program with chat capabilities, an easy and intuitive web based user interface and a powerful command line interface, in C.
-                                    </h4>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-2"></div>
-                    </div>
-                    <div class="row box">
-                        <div class="col-md-2"></div>
-                        <div class="col-md-8"> 
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <h4 class="right-then-center">
-                                         <a href="https://github.com/mounikasomisetty/UltimateTicTacToe">Artificial Intelligence Agent - Ultimate Tic Tac Toe</a>, IIIT-H
-                                    </h4>
-                                    <h4 class="right-then-center">
-                                        March 2015
-                                    </h4>
-                                </div>
-                                <div class="col-md-6">
-                                    <h4 class="left-then-center">
-                                        Worked in a team to create an AI Agent using Python that plays Ultimate Tic Tac Toe, using a learning algorithm and min-max tree with depth limited search.
-                                    </h4>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-2"></div>
-                    </div>
-                    <div class="row box">
-                        <div class="col-md-2"></div>
-                        <div class="col-md-8"> 
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <h4 class="right-then-center">
-                                         <a href="https://github.com/mounikasomisetty/SpinningTop">Spinning Top Game with Graphical Interface</a>, IIIT-H
-                                    </h4>
-                                    <h4 class="right-then-center">
-                                        February 2015
-                                    </h4>
-                                </div>
-                                <div class="col-md-6">
-                                    <h4 class="left-then-center">
-                                       Developed a simple terminal based 3D spinning top game made with OpenGL3. Has multiple terrains and multiple camera angles to view from, as part of the Graphics Course.
-                                    </h4>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-2"></div>
-                    </div>
-                    <div class="row box">
-                        <div class="col-md-2"></div>
-                        <div class="col-md-8"> 
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <h4 class="right-then-center">
-                                         <a href="https://github.com/mounikasomisetty/Carroms">Carroms with Graphical Interface</a>, IIIT-H
-                                    </h4>
-                                    <h4 class="right-then-center">
-                                        February 2015
-                                    </h4>
-                                </div>
-                                <div class="col-md-6">
-                                    <h4 class="left-then-center">
-                                        A simple terminal carroms game with a graphical user-friendly interface made with OpenGL2. It includes different surfaces with varying frictions, as well as three different levels.
-                                    </h4>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-2"></div>
-                    </div>
-                    <div class="row box">
-                        <div class="col-md-2"></div>
-                        <div class="col-md-8"> 
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <h4 class="right-then-center">
-                                        Portal Developer, Center for Innovation, IIIT-H
-                                    </h4>
-                                    <h4 class="right-then-center">
-                                        Aug 2014 - Nov 2014
-                                    </h4>
-                                </div>
-                                <div class="col-md-6">
-                                    <h4 class="left-then-center">
-                                        Lead the team as a project manager, as well as, built a web application using the iterative incremental software development life cycle, to help easily identify weak students and monitor grades and attendance, using Django and Foundation Framework.
-                                    </h4>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-2"></div>
-                    </div>
-                    <div class="row box">
-                        <div class="col-md-2"></div>
-                        <div class="col-md-8"> 
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <h4 class="right-then-center">
-                                        Database Management System, IIIT-H
-                                    </h4>
-                                    <h4 class="right-then-center">
-                                        October 2014
-                                    </h4>
-                                </div>
-                                <div class="col-md-6">
-                                    <h4 class="left-then-center">
-                                        Created a website with a simple DBMS using PHP for a mock restaurant.
-                                    </h4>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-2"></div>
-                    </div>
-                    <h1 class="heading">Other</h1>
-                    <hr>
-                    <div class="row box">
-                        <div class="col-md-4"></div>
-                        <div class="col-md-4">
-                            <h3 class="center">Under Construction</h3>
-                            <h4 class="center">While you wait, enjoy some of these gems (ROFL):</h4>
-                            <ul class="extra_stuff">
-                                <li>The smallest paint ever - <a href="pietry.html">here.</a></li>
-                                <li>A kaleidoscope in the making - <a href="kaltry.html">here.</a></li>
-                                <li>Some fun text stuff - <a href="try.html">here.</a></li>
-                                <li>Helpful(and pretty) HEX to RGB converter - <a href="rgbandhex.html">here.</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-md-4"></div>
-                    </div>
-                </div>
-                <div class="col-md-1 side-container">
-                    <h1 class="side arrows">
-                        <i class="fa fa-angle-right" onclick="moveBackLeft()"></i>
-                        <br>
-                        <span class="label">Home</span>
-                    </h1>
-                </div>
-            </div>
-        </div>
-        <!-- About Section -->
-        <div class="main-container" id="about" style="display:none;">
-            <div class="inner-container">
-                <div class="col-md-12 content-container" style="overflow:scroll;">
-                    <div class="inverse-i" id="inverse">
-                    <div class="inverse">
-                    <div class="inverse-text-holder">
-                        <h1 class="holderoftext" id="textgoeshere">ABOUT ME</h1>
-                    </div>
-                    </div>
-                    </div>
-                    <hr>
-                    <div class="row">
-                        <div class="col-md-1"></div>
-                        <div class="col-md-4">
-                             <h3 class="center"><h3>
                         <div class="row">
-                            <div class="col-xs-3"></div>
-                            <div class="col-xs-6" style="height:350px;overflow:hidden;">
-                                <img src="images/me.jpg" style="width:100%;overflow:hidden;">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-8">
+                                <h3 style="text-align:center">Web</h3>
+                                <hr>
+                                <ul class="skillslist">
+                                    <li>HTML
+                                        <span class="best"></span>
+                                    </li>
+                                    <li>CSS
+                                        <span class="best"></span>
+                                    </li>
+                                    <li>Javascript
+                                        <span class="inter"></span>
+                                    </li>
+                                    <li>jQuery
+                                        <span class="best"></span>
+                                    </li>
+                                    <li>Angular 5
+                                        <span class="beg"></span>
+                                    </li>
+                                    <li>Bootstrap Framework
+                                        <span class="best"></span>
+                                    </li>
+                                    <li>Foundation Framework
+                                        <span class="inter"></span>
+                                    </li>
+                                    <li>PHP
+                                        <span class="beg"></span>
+                                    </li>
+                                    <li>mySQL
+                                        <span class="best"></span>
+                                    </li>
+                                    <li>Web Development (Frameworks)</li>
+                                    <ul>
+                                        <li>Ruby on Rails
+                                            <span class="beg"></span>
+                                        </li>
+                                        <li>Django
+                                            <span class="inter"></span>
+                                        </li>
+                                        <li>ASP.NET
+                                            <span class="inter"></span>
+                                        </li>
+                                    </ul>
+                                    <li>C# with .NET Framework
+                                        <span class="inter"></span>
+                                    </li>
+                                    <li>Razor C#
+                                        <span class="inter"></span>
+                                    </li>
+                                </ul>
                             </div>
-                            <div class="col-xs-3"></div>
+                            <div class="col-md-2"></div>
                         </div>
+                        <div class="row">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-8">
+                                <h3 style="text-align:center">Misc.</h3>
+                                <hr>
+                                <ul class="skillslist">
+                                    <li>Jenkins CI/CD
+                                        <span class="inter"></span>
+                                    </li>
+                                    <li>Software Development Life Cycle
+                                        <span class="best"></span>
+                                    </li>
+                                    <ul>
+                                        <li>Testing like Nosetests
+                                            <span class="inter"></span>
+                                        </li>
+                                        <li>Code Reviewing
+                                            <span class="inter"></span>
+                                        </li>
+                                    </ul>
+                                    <li>OpenGL 2
+                                        <span class="inter"></span>
+                                    </li>
+                                    <li>OpenGL 3
+                                        <span class="inter"></span>
+                                    </li>
+                                    <li>ARM Assembly
+                                        <span class="beg"></span>
+                                    </li>
+                                    <li>Collaboration tools and version control like Github and Bitbucket
+                                        <span class="inter"></span>
+                                    </li>
+                                    <li>Debugging tools
+                                        <span class="inter"></span>
+                                    </li>
+                                    <li>Eclipse and Android Studio
+                                        <span class="beg"></span>
+                                    </li>
+                                    <li>Microsoft Visual Studio and Microsoft SQL Server
+                                        <span class="inter"></span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-2"></div>
                         </div>
-                        <div class="col-md-6">
-                            <h3 class="left-then-center" id="aboutme" style="padding-top:55px;">
-                                Hello there!<br><br>As you must know already, I'm Mounika Somisetty, and I've a undergraduate computer science degree with honours at the Center for Visual Information Technology (where I made my first attempts at research). My interests are diverse. On the academic side, I enjoy development in all forms. Though I do enjoy web development the most.<br><br>On the non-academic side, I love art and design, especially making oil and watercolor paintings, books, food and music!<br><br> I consider myself a creative person, and I understand design and user experience well. I have also worked in many teams, and headed a few in both academic and non academic environments.  I'm an active member of many groups on campus from the Student Academic Council and the Student Welcoming Body, to the College Magazine.
-                            </h3>
-                        </div>
-                         <div class="col-md-1"></div>
                     </div>
-                    <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="heading">Other Stuff</h1>
                         <hr>
-                         <div class="col-md-3"></div>
-                         <div class="col-md-3"></div>
-                        <div class="col-md-3">
-                             <ul id="contactmeat">
-                              <li id="email" onclick="function () { alert('email me at mounikas@gmail.com')}" ><a href="#"><i class="fa fa-envelope-o"></i> </a></li>
-                              <li id="icon_home"><a href="https://github.com/mounikasomisetty"><i class="fa fa-github"></i></a></li>
-                             <!--  <li><a href="https://www.facebook.com/mounikasomisetty"><i class="fa fa-facebook"></i></a></li> -->
-                             <!--  <li><a href="https://plus.google.com/u/0/+MounikaSomisetty"><i class="fa fa-google-plus"></i></a></li> -->
-                              <li><a href="https://www.linkedin.com/pub/mounika-somisetty/99/193/b02"><i class="fa fa-linkedin"></i></a></li>
-                            </ul>
-                            <!-- <h4 style="text-align:center;padding-top:10px;">mounikas@gmail.com<br> -->
-                            <!-- +91-9652042388<br> -->
-                            <!-- 52 Parijat Nivas<br>
-                            International Institute of Information Technology - Hyderabad, Gachibowli<br>
-                            India 500032<br></h4> -->
+                        <div class="row">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-8">
+                                <ul class="extra_stuff">
+                                    <li>Dean's List from 2013 - 2017</li>
+                                    <li>Runner's Up in Microsoft's Code. Fun. Do. Campus Hackathon</li>
+                                    <li>Member of the Constitution Drafting Committee at IIIT-H</li>
+                                    <li>Member of the Student Academic Council at IIIT-H</li>
+                                    <li>Member of the Apex Body at IIIT-H</li>
+                                    <li>Editor-in-Chief of the College Magazine, <a
+                                            href="http://ping.iiit.ac.in">Ping!</a>, at IIIT-H</li>
+                                    <li>School Captain, Orchids - The International School, 2010-2011.</li>
+                                    <li>House Vice Captain Orchids - The International School, 2009-2010</li>
+                                    <li>Assisted on the Android application for Felicity! - IIIT-H's college fest</li>
+                                    <li>Ranked 3rd in the state in the National Cyber Olympiad in 2011</li>
+                                    <li>Ranked 3rd internationally in the International English Olympiad in 2011</li>
+                                    <li>Ranked 6th internationally in the International English Olympiad in 2012 </li>
+                                    <li>Volunteer for the Guardian Circle, IIIT-H’s Lean In Chapter, Girls Code Camp,
+                                        FedEx Women in STEM.</li>
+                                    <li>Awarded distinction in the Trinity College Exam in Electronic Keyboard, for
+                                        Grade 1, Grade 2 and Grade 3</li>
+                                    <li>Active in painting, writing and dance</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-2"></div>
                         </div>
-                         <div class="col-md-3"></div>
                     </div>
-                </div>
-                <div class="col-md-12 small-container">
-                    <h1 class="side arrows">
-                        <i class="fa fa-angle-down" onclick="moveBackUp()"></i>
-                        <br>
-                        <span class="label">Home</span>
-                    </h1>
                 </div>
             </div>
         </div>
-    </body>
+    </div>
+    <!-- Project Section -->
+    <div class="main-container" id="project" style="display:none;">
+        <div class="inner-container">
+            <div class="col-md-12 main-main-container" style="overflow-y:scroll;">
+                <div class="inverse-i" id="inverse">
+                    <div class="inverse">
+                        <div class="inverse-text-holder">
+                            <h1 class="holderoftext" id="textgoeshere">PROJECTS <span onclick="moveBackLeft()"> > </span></h1>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <h1 class="heading">School</h1>
+                <hr>
+                <div class="row box">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h4 class="right-then-center">
+                                    Gold Corpus for Telegraphic Summarization, IIIT-H
+                                </h4>
+                                <h4 class="right-then-center">
+                                    October 2018
+                                </h4>
+                            </div>
+                            <div class="col-md-6">
+                                <h4 class="left-then-center">
+                                    Second Author of ACL 2018 Workshop Paper that constructed a dataset for extractive and abstractive summarization
+                                </h4>
+                                <h4 class="left-then-center">
+                                    Have a look at the paper <a href="https://aclweb.org/anthology/W18-3810">here</a>
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2"></div>
+                </div>
+                <div class="row box">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h4 class="right-then-center">
+                                    Automated Negotiation Bot, IIIT-H
+                                </h4>
+                                <h4 class="right-then-center">
+                                    August 2016 - November 2016
+                                </h4>
+                            </div>
+                            <div class="col-md-6">
+                                <h4 class="left-then-center">
+                                    Designed a negotiating agent for a realistic domain based on the GENIUS platform,
+                                    capable of performing multiparty negotiation; also, was the tournament winner in the
+                                    classroom setting.
+                                </h4>
+                                <h4 class="left-then-center">
+                                    Have a look at the report for the random agent beater <a
+                                        href="documents/mas-random.pdf">here</a> and the final bot <a
+                                        href="documents/mas-final">here</a>
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2"></div>
+                </div>
+                <div class="row box">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h4 class="right-then-center">
+                                    Discriminative Blur Detection Features, IIIT-H
+                                </h4>
+                                <h4 class="right-then-center">
+                                    August 2015 - November 2015
+                                </h4>
+                            </div>
+                            <div class="col-md-6">
+                                <h4 class="left-then-center">
+                                    Implemented a research paper by Shi et al published in CVPR’14. The paper explores
+                                    representations of an image to discriminate between blurred and unblurred regions.
+                                    We also look at methods by other researchers.
+                                </h4>
+                                <h4 class="left-then-center">
+                                    Have a look at the report <a href="documents/blur-detection-features.pdf">here</a>
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2"></div>
+                </div>
+                <div class="row box">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h4 class="right-then-center">
+                                    The Flip Side (A Board Game), IIIT-H
+                                </h4>
+                                <h4 class="right-then-center">
+                                    August 2015 - November 2015
+                                </h4>
+                            </div>
+                            <div class="col-md-6">
+                                <h4 class="left-then-center">
+                                    Created and designed a working prototype of a board game called "The Flip Side" for
+                                    the Game Design and Engineering Course.
+                                </h4>
+                                <h4 class="left-then-center">
+                                    Have a look at the rules <a href="documents/the-flip-side.pdf">here</a>
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2"></div>
+                </div>
+                <div class="row box">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h4 class="right-then-center">
+                                    LLVM Compiler, IIIT-H
+                                </h4>
+                                <h4 class="right-then-center">
+                                    August 2015 - November 2015
+                                </h4>
+                            </div>
+                            <div class="col-md-6">
+                                <h4 class="left-then-center">
+                                    Worked in a team to create a compiler using Flex, Bision and C++ for Decaf Language
+                                    that creates an LLVM assembly output.
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2"></div>
+                </div>
+                <div class="row box">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h4 class="right-then-center">
+                                    Handwriting Recognition, IIIT-H
+                                </h4>
+                                <h4 class="right-then-center">
+                                    August 2015 - November 2015
+                                </h4>
+                            </div>
+                            <div class="col-md-6">
+                                <h4 class="left-then-center">
+                                    Created a system, that converts a document of handwritten words to textual output
+                                    using a Convolution Neural Network and Hidden Markov Model, in Matlab and Python.
+                                </h4>
+                                <h4 class="left-then-center">
+                                    Have a look at the report <a href="documents/handwriting.pdf">here</a>
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2"></div>
+                </div>
+
+
+                <div class="row box">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h4 class="right-then-center">
+                                    Machine Learning Based Tour Guide, Center for Visual Information Technology
+                                </h4>
+                                <h4 class="right-then-center">
+                                    May 2015 - July 2015
+                                </h4>
+                            </div>
+                            <div class="col-md-6">
+                                <h4 class="left-then-center">
+                                    Developed, as part of a team, a mobile application that acts like a tour guide for
+                                    visitors to the campus based on the pictures they take, using machine learning and
+                                    image processing techniques, using MATLAB.
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2"></div>
+                </div>
+                <div class="row box">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h4 class="right-then-center">
+                                    <a href="https://github.com/mrinaldhar/p2p-fileshare">TCP/IP Server Client File
+                                        Sharing Network</a>, IIIT-H
+                                </h4>
+                                <h4 class="right-then-center">
+                                    March 2015
+                                </h4>
+                            </div>
+                            <div class="col-md-6">
+                                <h4 class="left-then-center">
+                                    Worked in a team to create a multi-purpose file transfer program with chat
+                                    capabilities, an easy and intuitive web based user interface and a powerful command
+                                    line interface, in C.
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2"></div>
+                </div>
+                <div class="row box">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h4 class="right-then-center">
+                                    <a href="https://github.com/mounikasomisetty/UltimateTicTacToe">Artificial
+                                        Intelligence Agent - Ultimate Tic Tac Toe</a>, IIIT-H
+                                </h4>
+                                <h4 class="right-then-center">
+                                    March 2015
+                                </h4>
+                            </div>
+                            <div class="col-md-6">
+                                <h4 class="left-then-center">
+                                    Worked in a team to create an AI Agent using Python that plays Ultimate Tic Tac Toe,
+                                    using a learning algorithm and min-max tree with depth limited search.
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2"></div>
+                </div>
+                <div class="row box">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h4 class="right-then-center">
+                                    <a href="https://github.com/mounikasomisetty/SpinningTop">Spinning Top Game with
+                                        Graphical Interface</a>, IIIT-H
+                                </h4>
+                                <h4 class="right-then-center">
+                                    February 2015
+                                </h4>
+                            </div>
+                            <div class="col-md-6">
+                                <h4 class="left-then-center">
+                                    Developed a simple terminal based 3D spinning top game made with OpenGL3. Has
+                                    multiple terrains and multiple camera angles to view from, as part of the Graphics
+                                    Course.
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2"></div>
+                </div>
+                <div class="row box">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h4 class="right-then-center">
+                                    <a href="https://github.com/mounikasomisetty/Carroms">Carroms with Graphical
+                                        Interface</a>, IIIT-H
+                                </h4>
+                                <h4 class="right-then-center">
+                                    February 2015
+                                </h4>
+                            </div>
+                            <div class="col-md-6">
+                                <h4 class="left-then-center">
+                                    A simple terminal carroms game with a graphical user-friendly interface made with
+                                    OpenGL2. It includes different surfaces with varying frictions, as well as three
+                                    different levels.
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2"></div>
+                </div>
+                <div class="row box">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h4 class="right-then-center">
+                                    Portal Developer, Center for Innovation, IIIT-H
+                                </h4>
+                                <h4 class="right-then-center">
+                                    Aug 2014 - Nov 2014
+                                </h4>
+                            </div>
+                            <div class="col-md-6">
+                                <h4 class="left-then-center">
+                                    Lead the team as a project manager, as well as, built a web application using the
+                                    iterative incremental software development life cycle, to help easily identify weak
+                                    students and monitor grades and attendance, using Django and Foundation Framework.
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2"></div>
+                </div>
+                <div class="row box">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h4 class="right-then-center">
+                                    Database Management System, IIIT-H
+                                </h4>
+                                <h4 class="right-then-center">
+                                    October 2014
+                                </h4>
+                            </div>
+                            <div class="col-md-6">
+                                <h4 class="left-then-center">
+                                    Created a website with a simple DBMS using PHP for a mock restaurant.
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2"></div>
+                </div>
+                <h1 class="heading">Other</h1>
+                <hr>
+                <div class="row box">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4">
+                        <h3 class="center">Under Construction</h3>
+                        <h4 class="center">While you wait, enjoy some of these gems (ROFL):</h4>
+                        <ul class="extra_stuff">
+                            <li>The smallest paint ever - <a href="pietry.html">here.</a></li>
+                            <li>A kaleidoscope in the making - <a href="kaltry.html">here.</a></li>
+                            <li>Some fun text stuff - <a href="try.html">here.</a></li>
+                            <li>Helpful(and pretty) HEX to RGB converter - <a href="rgbandhex.html">here.</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
 </html>

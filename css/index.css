@@ -81,14 +81,14 @@ html
 
 	.more-info
 	{
-		font-size: 20px !important;
+		font-size: 10px !important;
 	}
 
 }
 @media (min-width: 992px) {
 	#smaller-info
 	{
-		display: none;
+		
 	}
 	.smaller{
 		display: none;
@@ -112,7 +112,7 @@ html
 	.side{
 	    text-align: center;
 	    position: relative;
-	    top: 40%;
+	    top: 8%;
 		/*display:flex;*/
 		/*align-items: center;*/
 	}
@@ -261,6 +261,10 @@ li > span{
 {
   display:inline-block;
 }
+
+.contacticon{
+	color: black !important;
+}
 .extra_stuff{
 	list-style-type: none;
 }
@@ -277,7 +281,7 @@ li > span{
 }
 
 .moreinfos{
-	display: none;
+	list-style-type: none;
 }
 
 #tagline
